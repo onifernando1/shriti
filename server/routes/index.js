@@ -13,4 +13,17 @@ router.get("/about", function (req, res, next) {
 router.get("/contact", function (req, res, next) {
   res.render();
 });
+
+router.get("/portfolio", function (req, res, next) {
+  res.render();
+});
+
+router.get("/contact", function (req, res, next) {
+  res.render();
+});
+
+router.get("/news", function (req, res, next) {
+  res.render();
+});
+
 module.exports = router;

@@ -10,13 +10,19 @@ function Portfolio() {
       .get(`http://localhost:3000/paintings`)
       .then((response) => {
         setPaintings(response.data.painting_list);
-        console.log(`painting list: ${paintings}`);
       })
       .catch((error) => {
         console.error(error);
       });
   }, []);
-  return <div>Portfolio page</div>;
+
+  return (
+    <>
+      {paintings.map((painting) => {
+        return <div>{painting.title}</div>;
+      })}
+    </>
+  );
 }
 
 export default Portfolio;

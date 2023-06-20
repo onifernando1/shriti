@@ -1,5 +1,5 @@
 function Workshops() {
-  return <div>Homepage</div>;
+  return <div>Workshops</div>;
 }
 
 export default Workshops;

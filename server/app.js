@@ -8,9 +8,8 @@ require("dotenv").config();
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const paintingsRouter = require("./routes/paintings");
-
 var app = express();
-
+const cors = require("cors");
 const mongoDb = process.env.SECRET_KEY;
 mongoose.connect(mongoDb, {
   useUnifiedTopology: true,
@@ -25,9 +24,16 @@ app.set("view engine", "pug");
 
 app.use(logger("dev"));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(
+  cors({
+    origin: "http://localhost:9000",
+    credentials: true,
+  })
+);
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);

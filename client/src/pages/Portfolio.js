@@ -20,6 +20,7 @@ function Portfolio() {
   return (
     <>
       <div className="portfolio-container">
+        <div className="header-temp">HEADER HEADER HEADER </div>
         <div className="portfolio-paintings-container">
           {paintings.map((painting) => {
             return (

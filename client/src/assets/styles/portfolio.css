@@ -2,21 +2,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .portfolio-paintings-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .portfolio-paintings-container img {
-  height: 10rem;
-  object-fit: contain;
+  height: 17rem;
+  width: 17rem;
+  object-fit: cover;
 }
 
 .portfolio-individual-container {
-  height: 10rem;
-  width: 10rem;
+  height: 17rem;
+  width: 17rem;
   overflow: hidden;
+}
+
+.header-temp {
+  margin-bottom: 50px;
 }

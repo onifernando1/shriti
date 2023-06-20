@@ -8,6 +8,7 @@ const PaintingSchema = new Schema({
   description: { type: String },
   category: { type: String },
   information: { type: String },
+  colour: { type: String },
 });
 
 module.exports = mongoose.model("Painting", PaintingSchema);

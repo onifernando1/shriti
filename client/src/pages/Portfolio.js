@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState, setState } from "react";
 import axios from "axios";
+import "../assets/styles/portfolio.css";
 
 function Portfolio() {
   const [paintings, setPaintings] = useState([]);

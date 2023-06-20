@@ -1,0 +1,22 @@
+.portfolio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-paintings-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.portfolio-paintings-container img {
+  height: 10rem;
+  object-fit: contain;
+}
+
+.portfolio-individual-container {
+  height: 10rem;
+  width: 10rem;
+  overflow: hidden;
+}

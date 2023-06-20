@@ -6,10 +6,10 @@ const paintingsController = require("../controllers/paintingsController");
 
 router.get("/", paintingsController.painting_list);
 router.get("/ink", paintingsController.ink);
-router.get("/abstract", paintingsController.painting_list);
-router.get("/landscape", paintingsController.painting_list);
-router.get("/figurative", paintingsController.painting_list);
-router.get("/portrait", paintingsController.painting_list);
-router.get("/other", paintingsController.painting_list);
+router.get("/abstract", paintingsController.abstract);
+router.get("/landscape", paintingsController.landscape);
+router.get("/figurative", paintingsController.figurative);
+router.get("/portrait", paintingsController.portrait);
+router.get("/other", paintingsController.other);
 
 module.exports = router;

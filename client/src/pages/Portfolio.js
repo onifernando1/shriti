@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState, setState } from "react";
 import axios from "axios";
 import "../assets/styles/portfolio.css";
+import PaintingOverview from "../components/PaintingOverview";
 
 function Portfolio() {
   const [paintings, setPaintings] = useState([]);
@@ -19,20 +20,7 @@ function Portfolio() {
 
   return (
     <>
-      <div className="portfolio-container">
-        <div className="header-temp">HEADER HEADER HEADER </div>
-        <div className="portfolio-paintings-container">
-          {paintings.map((painting) => {
-            return (
-              <div className="portfolio-individual-container">
-                <img
-                  src={require(`../assets/images/${painting.image}.jpg`)}
-                ></img>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      <PaintingOverview paintings={paintings} />
     </>
   );
 }

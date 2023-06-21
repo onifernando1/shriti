@@ -11,3 +11,15 @@
   text-decoration: none;
   color: black;
 }
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 2rem;
+}

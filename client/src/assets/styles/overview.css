@@ -13,12 +13,13 @@
   display: grid;
   max-width: 100%;
   grid-template-columns: repeat(3, minmax(15rem, 1fr));
-  gap: 1rem;
+  gap: 2rem;
 }
 
 @media (max-width: 768px) {
   .portfolio-paintings-container {
     grid-template-columns: repeat(2, minmax(8rem, 1fr));
+    gap: 2rem;
   }
 }
 
@@ -36,8 +37,8 @@
 
 @media (max-width: 768px) {
   .portfolio-individual-container {
-    height: 9rem;
-    width: 9rem;
+    height: 8rem;
+    width: 8rem;
   }
 }
 

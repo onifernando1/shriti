@@ -1,14 +1,18 @@
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
+const User = require("./models/user");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+const session = require("express-session");
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
 require("dotenv").config();
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+const bodyParser = require("body-parser");
 const paintingsRouter = require("./routes/paintings");
-var app = express();
 const cors = require("cors");
 const mongoDb = process.env.SECRET_KEY;
 mongoose.connect(mongoDb, {
@@ -16,8 +20,57 @@ mongoose.connect(mongoDb, {
   useNewUrlParser: true,
 });
 const db = mongoose.connection;
-
 db.on("error", console.error.bind(console, "mongo connection error"));
+
+//passport
+
+passport.use(
+  new LocalStrategy(async (username, password, done) => {
+    try {
+      const user = await User.findOne({ username: username });
+
+      if (!user) {
+        return done(null, false, { message: "Incorrect username" });
+      }
+
+      const passwordMatch = await new Promise((resolve, reject) => {
+        bcrypt.compare(password, user.password, (err, res) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(res);
+          }
+        });
+      });
+
+      if (passwordMatch) {
+        console.log(user);
+        console.log("pw match above");
+        return done(null, user);
+      }
+      return done(null, false, { message: "Incorrect password" });
+    } catch (err) {
+      return done(err);
+    }
+  })
+);
+
+passport.serializeUser(function (user, done) {
+  console.log("SERIALIZE");
+  done(null, user.id);
+});
+
+passport.deserializeUser(async function (id, done) {
+  try {
+    const user = await User.findById(id).exec();
+    done(null, user);
+  } catch (err) {
+    done(err);
+  }
+});
+
+var app = express();
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
@@ -34,6 +87,25 @@ app.use(
     credentials: true,
   })
 );
+
+app.use(bodyParser.json());
+// app.use(express.urlencoded({ extended: false }));
+app.use(
+  session({
+    secret: "cats",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      secure: false, // Allow cookie over HTTP
+    },
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+app.use((req, res, next) => {
+  res.locals.currentUser = req.user;
+  next();
+});
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);

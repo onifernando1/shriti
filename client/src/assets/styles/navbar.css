@@ -4,6 +4,7 @@
   align-items: center;
   gap: 1rem;
   padding: 20px;
+  /* background-color: black; */
 }
 
 .navbar-container a {

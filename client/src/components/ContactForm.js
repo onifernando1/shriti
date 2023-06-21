@@ -1,27 +1,38 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-
+import { useState, setState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 export const ContactUs = () => {
+  const [service, setService] = useState("");
+  const [template, setTemplate] = useState("");
+  const [publicKey, setPublicKey] = useState("");
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/config`)
+      .then((response) => {
+        setService(response.data.service_id);
+        setTemplate(response.data.template_id);
+        setPublicKey(response.data.public_key);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        form.current,
-        "YOUR_PUBLIC_KEY"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm(service, template, form.current, publicKey).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
 
   return (

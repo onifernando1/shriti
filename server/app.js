@@ -39,6 +39,14 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/paintings", paintingsRouter);
 
+app.get("/config", (req, res) => {
+  res.json({
+    service_id: process.env.SERVICE_ID,
+    template_id: process.env.TEMPLATE_ID,
+    public_key: process.env.PUBLIC_KEY,
+  });
+});
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

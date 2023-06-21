@@ -155,3 +155,7 @@
   margin-top: 210px;
   margin-left: 250px;
 }
+
+.dropdown > div {
+  margin-top: 5px;
+}

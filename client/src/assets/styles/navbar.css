@@ -129,3 +129,20 @@
   z-index: 100;
   /* display: none; */
 }
+
+.mobile-portfolio-dropdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
+}
+
+.down-arrow {
+  text-align: center;
+  margin-top: -10px;
+}
+
+.dropdown-portfolio-title,
+.down-arrow {
+  font-size: 2rem;
+}

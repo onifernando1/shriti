@@ -13,7 +13,7 @@ function Navbar() {
 
   const hideNavbar = () => {
     if (navbarReveal == true) {
-      setNavbarReveal(false);
+      // setNavbarReveal(false);
     }
   };
 
@@ -26,6 +26,14 @@ function Navbar() {
   const hideDropdown = () => {
     if (dropdownReveal == true) {
       setDropdownReveal(false);
+    }
+  };
+
+  const toggleDropdown = () => {
+    if (dropdownReveal == true) {
+      setDropdownReveal(false);
+    } else {
+      setDropdownReveal(true);
     }
   };
 
@@ -43,7 +51,20 @@ function Navbar() {
               {navbarReveal ? (
                 <div className="links">
                   <Link to="/">home</Link>
-                  <Link to="/portfolio">portfolio</Link>
+                  <div
+                    onClick={toggleDropdown}
+                    className="mobile-portfolio-dropdown-container"
+                  >
+                    <div className="dropdown-portfolio-title">portfolio</div>
+                    <div className="down-arrow">⌄</div>
+                  </div>
+                  {dropdownReveal ? (
+                    <>
+                      <Link>abstract</Link>
+                      <Link>landscape/seascape</Link>
+                      <Link>abstract</Link>
+                    </>
+                  ) : null}
                   <Link to="/about">my story</Link>
                   <Link to="/contact">contact</Link>
                   <Link to="/news">news</Link>

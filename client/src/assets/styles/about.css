@@ -1,3 +1,21 @@
 .shriti-portrait {
-  height: 50%;
+  height: 20rem;
+  /* width: 20rem; */
+  object-fit: contain;
+  margin-bottom: 2rem;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 2rem;
+}
+
+.about-text {
+  width: 60rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
 }

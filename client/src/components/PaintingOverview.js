@@ -4,9 +4,15 @@ import { useState, setState } from "react";
 function PaintingOverview(params) {
   const paintings = params.paintings;
   const [fullScreenImage, setFullScreenImage] = useState("");
+  const [showFullScreen, setShowFullScreen] = useState(false);
 
   const displayFullScreenImage = (name) => {
     setFullScreenImage(name);
+    setShowFullScreen(true);
+  };
+
+  const hideFullScreen = () => {
+    setShowFullScreen(false);
   };
 
   return (
@@ -27,10 +33,20 @@ function PaintingOverview(params) {
           );
         })}
       </div>
-      {fullScreenImage ? (
-        <div className="full-screen-image">
-          <img src={require(`../assets/images/${fullScreenImage}.jpg`)}></img>
-        </div>
+      {showFullScreen ? (
+        <>
+          {fullScreenImage ? (
+            <div
+              className="full-screen-image-container"
+              onClick={hideFullScreen}
+            >
+              <img
+                id="full-image"
+                src={require(`../assets/images/${fullScreenImage}.jpg`)}
+              ></img>
+            </div>
+          ) : null}
+        </>
       ) : null}
     </div>
   );

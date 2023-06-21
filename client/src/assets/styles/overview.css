@@ -28,3 +28,20 @@
 .header-temp {
   margin-bottom: 50px;
 }
+
+.full-screen-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-screen-image {
+  height: 98%;
+  width: 98%;
+}

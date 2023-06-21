@@ -95,3 +95,30 @@
     margin-top: -20px;
   }
 }
+
+.pc-links {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  align-self: center;
+  gap: 2rem;
+}
+
+.pc-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+}
+
+.pc-navbar-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pc-logo {
+  font-size: 3rem;
+}

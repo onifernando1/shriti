@@ -1,0 +1,16 @@
+.news-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.upcoming {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.news {
+  width: 25rem;
+}

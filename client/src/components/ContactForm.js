@@ -3,7 +3,12 @@ import emailjs from "@emailjs/browser";
 import { useState, setState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+require("../assets/styles/contact-form.css");
 export const ContactUs = () => {
+  const navigate = useNavigate();
+
   const [service, setService] = useState("");
   const [template, setTemplate] = useState("");
   const [publicKey, setPublicKey] = useState("");
@@ -33,17 +38,21 @@ export const ContactUs = () => {
         console.log(error.text);
       }
     );
+
+    navigate("/");
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
-    </form>
+    <div className="form-container">
+      <form ref={form} onSubmit={sendEmail}>
+        <label>Name</label>
+        <input type="text" name="user_name" />
+        <label>Email</label>
+        <input type="email" name="user_email" />
+        <label>Message</label>
+        <textarea name="message" />
+        <input type="submit" value="Send" />
+      </form>
+    </div>
   );
 };

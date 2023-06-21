@@ -11,6 +11,12 @@
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  .upcoming {
+    margin-top: 5rem;
+  }
+}
+
 .news {
   width: 25rem;
 }

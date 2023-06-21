@@ -36,6 +36,12 @@
   overflow: hidden;
 }
 
+.portfolio-individual-container img:hover {
+  transform: scale(1.05);
+  transition: transform ease-in-out 1s, filter linear 0.5s;
+  filter: brightness(90%);
+}
+
 @media (max-width: 768px) {
   .portfolio-individual-container {
     height: 8rem;

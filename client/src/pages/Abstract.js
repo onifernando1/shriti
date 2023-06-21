@@ -10,7 +10,7 @@ function Abstract() {
   const [paintings, setPaintings] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/paintings`)
+      .get(`http://localhost:3000/paintings/abstract`)
       .then((response) => {
         setPaintings(response.data.painting_list);
       })

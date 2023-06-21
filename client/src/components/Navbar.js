@@ -94,7 +94,9 @@ function Navbar() {
           <div className="pc-navbar-container">
             <div className="pc-logo">shriti fernando</div>
             <div className="pc-links">
-              <Link to="/">home</Link>
+              <Link onMouseOver={hideDropdown} to="/">
+                home
+              </Link>
               <Link to="/portfolio">
                 <div onMouseEnter={showDropdown} onClick={hideDropdown}>
                   portoflio
@@ -116,10 +118,18 @@ function Navbar() {
                   </>
                 ) : null}
               </Link>
-              <Link to="/about">my story</Link>
-              <Link to="/contact">contact</Link>
-              <Link to="/news">news</Link>
-              <Link to="/workshops">workshops</Link>
+              <Link onMouseOver={hideDropdown} to="/about">
+                my story
+              </Link>
+              <Link onMouseOver={hideDropdown} to="/contact">
+                contact
+              </Link>
+              <Link onMouseOver={hideDropdown} to="/news">
+                news
+              </Link>
+              <Link onMouseOver={hideDropdown} to="/workshops">
+                workshops
+              </Link>
             </div>
           </div>
         </div>

@@ -49,18 +49,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100rem;
-  width: 100rem;
+  height: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  overflow: hidden;
 }
 
 .full-screen-image {
-  height: 98%;
-  width: 98%;
+  height: 80%;
+  width: 80%;
 }

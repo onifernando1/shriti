@@ -13,7 +13,7 @@ function Navbar() {
 
   const hideNavbar = () => {
     if (navbarReveal == true) {
-      // setNavbarReveal(false);
+      setNavbarReveal(false);
     }
   };
 
@@ -41,7 +41,7 @@ function Navbar() {
     <>
       {isMobile ? (
         <>
-          <div className="navbar" onClick={hideNavbar}>
+          <div className="navbar">
             <div className="navbar-container">
               <div className="hamburger-lines" onClick={showNavbar}>
                 <div className="line1"></div>
@@ -49,27 +49,32 @@ function Navbar() {
                 <div className="line3"></div>
               </div>
               {navbarReveal ? (
-                <div className="links">
-                  <Link to="/">home</Link>
-                  <div
-                    onClick={toggleDropdown}
-                    className="mobile-portfolio-dropdown-container"
-                  >
-                    <div className="dropdown-portfolio-title">portfolio</div>
-                    <div className="down-arrow">⌄</div>
+                <>
+                  <div className="links">
+                    <div className="close-navbar" onClick={hideNavbar}>
+                      X
+                    </div>
+                    <Link to="/">home</Link>
+                    <div
+                      onClick={toggleDropdown}
+                      className="mobile-portfolio-dropdown-container"
+                    >
+                      <div className="dropdown-portfolio-title">portfolio</div>
+                      <div className="down-arrow">⌄</div>
+                    </div>
+                    {dropdownReveal ? (
+                      <>
+                        <Link>abstract</Link>
+                        <Link>landscape/seascape</Link>
+                        <Link>abstract</Link>
+                      </>
+                    ) : null}
+                    <Link to="/about">my story</Link>
+                    <Link to="/contact">contact</Link>
+                    <Link to="/news">news</Link>
+                    <Link to="/workshops">workshops</Link>
                   </div>
-                  {dropdownReveal ? (
-                    <>
-                      <Link>abstract</Link>
-                      <Link>landscape/seascape</Link>
-                      <Link>abstract</Link>
-                    </>
-                  ) : null}
-                  <Link to="/about">my story</Link>
-                  <Link to="/contact">contact</Link>
-                  <Link to="/news">news</Link>
-                  <Link to="/workshops">workshops</Link>
-                </div>
+                </>
               ) : null}
             </div>
           </div>

@@ -146,3 +146,12 @@
 .down-arrow {
   font-size: 2rem;
 }
+
+.close-navbar {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  margin-top: 210px;
+  margin-left: 250px;
+}

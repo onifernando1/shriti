@@ -96,19 +96,21 @@ function Navbar() {
             <div className="pc-links">
               <Link to="/">home</Link>
               <Link to="/portfolio">
-                <div onMouseEnter={showDropdown}>portoflio</div>
+                <div onMouseEnter={showDropdown} onClick={hideDropdown}>
+                  portoflio
+                </div>
 
                 {dropdownReveal ? (
                   <>
                     <div onMouseLeave={hideDropdown} className="dropdown">
                       <div>
-                        <Link>abstract</Link>
+                        <Link onClick={hideDropdown}>abstract</Link>
                       </div>
                       <div>
-                        <Link>landscape/seascape</Link>
+                        <Link onClick={hideDropdown}>landscape/seascape</Link>
                       </div>
                       <div>
-                        <Link>abstract</Link>
+                        <Link onClick={hideDropdown}>abstract</Link>
                       </div>
                     </div>
                   </>

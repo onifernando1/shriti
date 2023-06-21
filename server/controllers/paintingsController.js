@@ -40,7 +40,23 @@ exports.portrait = asyncHandler(async (req, res, next) => {
   res.json({ painting_list: portraitPaintings });
 });
 
+exports.animals = asyncHandler(async (req, res, next) => {
+  const animalPaintings = await Painting.find({
+    category: "animals",
+  }).exec();
+  res.json({ painting_list: animalPaintings });
+});
+
+exports.asian = asyncHandler(async (req, res, next) => {
+  const asianPaintings = await Painting.find({
+    category: "asian",
+  }).exec();
+  res.json({ painting_list: asianPaintings });
+});
+
 exports.other = asyncHandler(async (req, res, next) => {
-  const otherPaintings = await Painting.find({ category: "other" }).exec();
+  const otherPaintings = await Painting.find({
+    category: "other",
+  }).exec();
   res.json({ painting_list: otherPaintings });
 });

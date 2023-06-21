@@ -11,5 +11,7 @@ router.get("/landscape", paintingsController.landscape);
 router.get("/figurative", paintingsController.figurative);
 router.get("/portrait", paintingsController.portrait);
 router.get("/other", paintingsController.other);
+router.get("/animals", paintingsController.animals);
+router.get("/asian", paintingsController.asian);
 
 module.exports = router;

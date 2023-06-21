@@ -66,9 +66,27 @@ function Navbar() {
                     </div>
                     {dropdownReveal ? (
                       <>
-                        <Link onClick={hideNavbar}>abstract</Link>
-                        <Link onClick={hideNavbar}>landscape/seascape</Link>
-                        <Link onClick={hideNavbar}>abstract</Link>
+                        <Link to="/abstract" onClick={hideNavbar}>
+                          abstract
+                        </Link>
+                        <Link to="/landscape" onClick={hideNavbar}>
+                          landscape/seascape
+                        </Link>
+                        <Link to="/figurative" onClick={hideNavbar}>
+                          figurative
+                        </Link>
+                        <Link to="/portrait" onClick={hideNavbar}>
+                          portrait
+                        </Link>
+                        <Link to="/animals" onClick={hideNavbar}>
+                          animals
+                        </Link>
+                        <Link to="/asian" onClick={hideNavbar}>
+                          asian
+                        </Link>
+                        <Link to="/other" onClick={hideNavbar}>
+                          other
+                        </Link>
                       </>
                     ) : null}
                     <Link onClick={hideNavbar} to="/about">
@@ -106,14 +124,40 @@ function Navbar() {
                   <>
                     <div onMouseLeave={hideDropdown} className="dropdown">
                       <div>
-                        <Link onClick={hideDropdown}>abstract</Link>
+                        <Link to="/abstract" onClick={hideDropdown}>
+                          abstract
+                        </Link>
                       </div>
                       <div>
-                        <Link onClick={hideDropdown}>landscape/seascape</Link>
+                        <Link to="/landscape" onClick={hideDropdown}>
+                          landscape/seascape
+                        </Link>
                       </div>
                       <div>
-                        <Link onClick={hideDropdown}>abstract</Link>
+                        <Link to="/figurative" onClick={hideDropdown}>
+                          figurative
+                        </Link>
                       </div>
+                      <div>
+                        <Link to="/portrait" onClick={hideDropdown}>
+                          portrait
+                        </Link>
+                      </div>{" "}
+                      <div>
+                        <Link to="animals" onClick={hideDropdown}>
+                          animals
+                        </Link>
+                      </div>{" "}
+                      <div>
+                        <Link to="asian" onClick={hideDropdown}>
+                          asian
+                        </Link>
+                      </div>{" "}
+                      <div>
+                        <Link to="other" onClick={hideDropdown}>
+                          other
+                        </Link>
+                      </div>{" "}
                     </div>
                   </>
                 ) : null}

@@ -56,7 +56,17 @@
   justify-content: center;
 }
 
-.full-screen-image {
-  height: 80%;
-  width: 80%;
+@media (max-width: 768px) {
+  .full-screen-image-container {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #full-image {
+    /* height: 70%; */
+    max-width: 100%;
+    /* aspect-ratio: 1 / 1; */
+    object-fit: cover;
+  }
 }

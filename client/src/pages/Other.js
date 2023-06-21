@@ -7,7 +7,23 @@ import "../assets/styles/overview.css";
 import PaintingOverview from "../components/PaintingOverview";
 
 function Other() {
-  return <div>Other</div>;
+  const [paintings, setPaintings] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/paintings/other`)
+      .then((response) => {
+        setPaintings(response.data.painting_list);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+  return (
+    <>
+      <PaintingOverview paintings={paintings} />
+    </>
+  );
 }
 
 export default Other;

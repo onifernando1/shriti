@@ -7,7 +7,23 @@ import "../assets/styles/overview.css";
 import PaintingOverview from "../components/PaintingOverview";
 
 function Asian() {
-  return <div>Asian</div>;
+  const [paintings, setPaintings] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/paintings/asian`)
+      .then((response) => {
+        setPaintings(response.data.painting_list);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+  return (
+    <>
+      <PaintingOverview paintings={paintings} />
+    </>
+  );
 }
 
 export default Asian;

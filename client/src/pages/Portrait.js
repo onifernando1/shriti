@@ -7,7 +7,23 @@ import "../assets/styles/overview.css";
 import PaintingOverview from "../components/PaintingOverview";
 
 function Portrait() {
-  return <div>Portrait</div>;
+  const [paintings, setPaintings] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/paintings/portrait`)
+      .then((response) => {
+        setPaintings(response.data.painting_list);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+  return (
+    <>
+      <PaintingOverview paintings={paintings} />
+    </>
+  );
 }
 
 export default Portrait;

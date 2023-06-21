@@ -7,7 +7,23 @@ import "../assets/styles/overview.css";
 import PaintingOverview from "../components/PaintingOverview";
 
 function Figurate() {
-  return <div>Figurate</div>;
+  const [paintings, setPaintings] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/paintings/figurative`)
+      .then((response) => {
+        setPaintings(response.data.painting_list);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+  return (
+    <>
+      <PaintingOverview paintings={paintings} />
+    </>
+  );
 }
 
 export default Figurate;

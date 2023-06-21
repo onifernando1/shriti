@@ -54,7 +54,9 @@ function Navbar() {
                     <div className="close-navbar" onClick={hideNavbar}>
                       X
                     </div>
-                    <Link to="/">home</Link>
+                    <Link onClick={hideNavbar} to="/">
+                      home
+                    </Link>
                     <div
                       onClick={toggleDropdown}
                       className="mobile-portfolio-dropdown-container"
@@ -64,15 +66,23 @@ function Navbar() {
                     </div>
                     {dropdownReveal ? (
                       <>
-                        <Link>abstract</Link>
-                        <Link>landscape/seascape</Link>
-                        <Link>abstract</Link>
+                        <Link onClick={hideNavbar}>abstract</Link>
+                        <Link onClick={hideNavbar}>landscape/seascape</Link>
+                        <Link onClick={hideNavbar}>abstract</Link>
                       </>
                     ) : null}
-                    <Link to="/about">my story</Link>
-                    <Link to="/contact">contact</Link>
-                    <Link to="/news">news</Link>
-                    <Link to="/workshops">workshops</Link>
+                    <Link onClick={hideNavbar} to="/about">
+                      my story
+                    </Link>
+                    <Link onClick={hideNavbar} to="/contact">
+                      contact
+                    </Link>
+                    <Link onClick={hideNavbar} to="/news">
+                      news
+                    </Link>
+                    <Link onClick={hideNavbar} to="/workshops">
+                      workshops
+                    </Link>
                   </div>
                 </>
               ) : null}

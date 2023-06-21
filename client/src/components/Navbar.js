@@ -5,6 +5,8 @@ import { isMobile } from "react-device-detect";
 
 function Navbar() {
   const [navbarReveal, setNavbarReveal] = useState(false);
+  const [dropdownReveal, setDropdownReveal] = useState(false);
+
   const showNavbar = () => {
     setNavbarReveal(true);
   };
@@ -14,6 +16,19 @@ function Navbar() {
       setNavbarReveal(false);
     }
   };
+
+  const showDropdown = () => {
+    if (dropdownReveal == false) {
+      setDropdownReveal(true);
+    }
+  };
+
+  const hideDropdown = () => {
+    if (dropdownReveal == true) {
+      setDropdownReveal(false);
+    }
+  };
+
   return (
     <>
       {isMobile ? (
@@ -44,7 +59,25 @@ function Navbar() {
             <div className="pc-logo">shriti fernando</div>
             <div className="pc-links">
               <Link to="/">home</Link>
-              <Link to="/portfolio">portfolio</Link>
+              <Link to="/portfolio">
+                <div onMouseEnter={showDropdown}>portoflio</div>
+
+                {dropdownReveal ? (
+                  <>
+                    <div onMouseLeave={hideDropdown} className="dropdown">
+                      <div>
+                        <Link>abstract</Link>
+                      </div>
+                      <div>
+                        <Link>landscape/seascape</Link>
+                      </div>
+                      <div>
+                        <Link>abstract</Link>
+                      </div>
+                    </div>
+                  </>
+                ) : null}
+              </Link>
               <Link to="/about">my story</Link>
               <Link to="/contact">contact</Link>
               <Link to="/news">news</Link>

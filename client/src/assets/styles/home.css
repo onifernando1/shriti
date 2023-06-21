@@ -3,11 +3,18 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 9rem;
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    margin-top: 8rem;
+  }
 }
 
 .home-container img {
   height: 35rem;
+  margin-top: 3rem;
   /* width: 50%; */
 }
 

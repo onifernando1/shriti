@@ -31,7 +31,8 @@
   gap: 5px;
   flex-direction: column;
   height: 2rem;
-  margin-left: 1000px;
+  margin-left: 700px;
+  margin-top: 40px;
   position: absolute;
   justify-content: flex-start;
   align-items: center;
@@ -40,6 +41,7 @@
 @media (max-width: 768px) {
   .hamburger-lines {
     margin-left: 300px;
+    margin-top: 60px;
   }
 }
 
@@ -86,4 +88,10 @@
   height: 2rem;
   position: relative;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    margin-top: -20px;
+  }
 }

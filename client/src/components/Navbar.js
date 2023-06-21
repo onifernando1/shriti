@@ -17,7 +17,6 @@ function Navbar() {
     <>
       <div className="navbar" onClick={hideNavbar}>
         <div className="navbar-container">
-          <div className="logo">Shriti Fernando</div>
           <div className="hamburger-lines" onClick={showNavbar}>
             <div className="line1"></div>
             <div className="line2"></div>

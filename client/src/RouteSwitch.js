@@ -17,6 +17,11 @@ import Asian from "./pages/Asian";
 import Other from "./pages/Other";
 import LogInForm from "./components/LogInForms";
 import SignUpForm from "./components/SignUpForm";
+import Nudes from "./pages/Nudes";
+import Cyclists from "./pages/Cyclists";
+import Littlepeople from "./pages/Littlepeople";
+import Dancers from "./pages/Dancers";
+import Seascape from "./pages/Seascape";
 
 const RouteSwitch = () => {
   return (
@@ -36,9 +41,11 @@ const RouteSwitch = () => {
           <Route path="/portrait" element={<Portrait />} />
           <Route path="/animals" element={<Animals />} />
           <Route path="/asian" element={<Asian />} />
-          <Route path="/other" element={<Other />} />
-          <Route path="/login" element={<LogInForm />} />
-          <Route path="/signup" element={<SignUpForm />} />
+          <Route path="/nudes" element={<Nudes />} />
+          <Route path="/cyclists" element={<Cyclists />} />
+          <Route path="/littlepeople" element={<Littlepeople />} />
+          <Route path="/dancers" element={<Dancers />} />
+          <Route path="/seascape" element={<Seascape />} />
         </Routes>
       </BrowserRouter>
     </div>

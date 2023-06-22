@@ -84,8 +84,20 @@ function Navbar() {
                         <Link to="/asian" onClick={hideNavbar}>
                           asian
                         </Link>
-                        <Link to="/other" onClick={hideNavbar}>
-                          other
+                        <Link to="/nudes" onClick={hideNavbar}>
+                          nudes
+                        </Link>
+                        <Link to="/cyclists" onClick={hideNavbar}>
+                          cyclists
+                        </Link>
+                        <Link to="/littlepeople" onClick={hideNavbar}>
+                          little people
+                        </Link>
+                        <Link to="/dancers" onClick={hideNavbar}>
+                          dancers
+                        </Link>
+                        <Link to="/seascape" onClick={hideNavbar}>
+                          seascape
                         </Link>
                       </>
                     ) : null}
@@ -144,18 +156,43 @@ function Navbar() {
                         </Link>
                       </div>{" "}
                       <div>
-                        <Link to="animals" onClick={hideDropdown}>
+                        <Link to="/animals" onClick={hideDropdown}>
                           animals
                         </Link>
                       </div>{" "}
                       <div>
-                        <Link to="asian" onClick={hideDropdown}>
+                        <Link to="/asian" onClick={hideDropdown}>
                           asian
                         </Link>
                       </div>{" "}
                       <div>
-                        <Link to="other" onClick={hideDropdown}>
+                        <Link to="/other" onClick={hideDropdown}>
                           other
+                        </Link>
+                      </div>{" "}
+                      <div>
+                        <Link to="/nudes" onClick={hideDropdown}>
+                          nudes
+                        </Link>
+                      </div>{" "}
+                      <div>
+                        <Link to="/cyclists" onClick={hideDropdown}>
+                          cyclists
+                        </Link>
+                      </div>{" "}
+                      <div>
+                        <Link to="/littlepeople" onClick={hideDropdown}>
+                          littlepeople
+                        </Link>
+                      </div>{" "}
+                      <div>
+                        <Link to="/dancers" onClick={hideDropdown}>
+                          dancers
+                        </Link>
+                      </div>{" "}
+                      <div>
+                        <Link to="/seascape" onClick={hideDropdown}>
+                          seascape
                         </Link>
                       </div>{" "}
                     </div>

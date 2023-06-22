@@ -48,16 +48,19 @@ function PaintingOverview(params) {
               className="full-screen-image-container"
               onClick={hideFullScreen}
             >
-              src=
-              {(() => {
-                try {
-                  return require(`../assets/images/${fullScreenImage}.jpg`);
-                } catch (error) {
-                  console.log(error);
-                  console.log(fullScreenImage);
-                  return require("../assets/images/josie4.jpg"); // Use fallback image if it doesn't exist
-                }
-              })()}
+              <img
+                src={(() => {
+                  try {
+                    console.log("TEST CALLED");
+                    return require(`../assets/images/${fullScreenImage}.jpg`);
+                  } catch (error) {
+                    console.log("TEST NOT CALLED");
+                    console.log(error);
+                    console.log(fullScreenImage);
+                    return require("../assets/images/josie4.jpg"); // Use fallback image if it doesn't exist
+                  }
+                })()}
+              ></img>
             </div>
           ) : null}
         </>

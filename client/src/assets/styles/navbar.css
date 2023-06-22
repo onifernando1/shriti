@@ -159,6 +159,14 @@
   margin-left: 250px;
 }
 
+@media (max-width: 768px) {
+  .close-navbar {
+    /* margin-left: 420px; */
+    margin-top: 4rem;
+    margin-right: -2rem;
+  }
+}
+
 .dropdown > div {
   margin-top: 5px;
 }

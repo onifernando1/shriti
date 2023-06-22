@@ -54,9 +54,12 @@ function Navbar() {
                     <div className="close-navbar" onClick={hideNavbar}>
                       X
                     </div>
-                    <Link onClick={hideNavbar} to="/">
-                      home
-                    </Link>
+
+                    {dropdownReveal ? null : (
+                      <Link onClick={hideNavbar} to="/">
+                        home
+                      </Link>
+                    )}
                     <div
                       onClick={toggleDropdown}
                       className="mobile-portfolio-dropdown-container"
@@ -101,18 +104,23 @@ function Navbar() {
                         </Link>
                       </>
                     ) : null}
-                    <Link onClick={hideNavbar} to="/about">
-                      my story
-                    </Link>
-                    <Link onClick={hideNavbar} to="/contact">
-                      contact
-                    </Link>
-                    <Link onClick={hideNavbar} to="/news">
-                      news
-                    </Link>
-                    <Link onClick={hideNavbar} to="/workshops">
-                      workshops
-                    </Link>
+
+                    {dropdownReveal ? null : (
+                      <>
+                        <Link onClick={hideNavbar} to="/about">
+                          my story
+                        </Link>
+                        <Link onClick={hideNavbar} to="/contact">
+                          contact
+                        </Link>
+                        <Link onClick={hideNavbar} to="/news">
+                          news
+                        </Link>
+                        <Link onClick={hideNavbar} to="/workshops">
+                          workshops
+                        </Link>
+                      </>
+                    )}
                   </div>
                 </>
               ) : null}

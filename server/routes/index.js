@@ -1,12 +1,22 @@
-var express = require("express");
-var router = express.Router();
-const indexController = require("../controllers/indexController");
+const express = require("express");
+const router = express.Router();
+const emailjs = require("emailjs-com");
+const Email = require("../models/Email");
+const { v4: uuidv4 } = require("uuid");
 
-/* GET home page. CHANGE ALL CONTROLLERS */
-router.get("/", indexController.painting_list);
-router.get("/portfolio", indexController.painting_list);
-router.get("/about", indexController.painting_list);
-router.get("/contact", indexController.painting_list);
-router.get("/news", indexController.painting_list);
+router.post("/send-email", async (req, res) => {
+  const { user_name, user_email, message } = req.body;
+
+  const email = new Email({
+    id: uuidv4(),
+    name: user_name,
+    email: user_email,
+    message: message,
+  });
+
+  await email.save();
+
+  res.send(email);
+});
 
 module.exports = router;

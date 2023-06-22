@@ -25,10 +25,10 @@ function PaintingOverview(params) {
               key={painting._id}
               id={painting.image}
             >
-              <img
+              {/* <img
                 onClick={() => displayFullScreenImage(painting.image)}
                 src={require(`../assets/images/${painting.image}.jpg`)}
-              ></img>
+              ></img> */}
             </div>
           );
         })}
@@ -40,10 +40,10 @@ function PaintingOverview(params) {
               className="full-screen-image-container"
               onClick={hideFullScreen}
             >
-              <img
+              {/* <img
                 id="full-image"
                 src={require(`../assets/images/${fullScreenImage}.jpg`)}
-              ></img>
+              ></img> */}
             </div>
           ) : null}
         </>

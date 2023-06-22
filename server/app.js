@@ -9,6 +9,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
 require("dotenv").config();
+const jwt = require("jsonwebtoken");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const bodyParser = require("body-parser");

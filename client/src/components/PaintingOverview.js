@@ -25,10 +25,18 @@ function PaintingOverview(params) {
               key={painting._id}
               id={painting.image}
             >
-              {/* <img
+              <img
                 onClick={() => displayFullScreenImage(painting.image)}
-                src={require(`../assets/images/${painting.image}.jpg`)}
-              ></img> */}
+                src={(() => {
+                  try {
+                    return require(`../assets/images/${painting.image}.jpg`);
+                  } catch (error) {
+                    console.log(error);
+                    console.log(painting.image);
+                    return require("../assets/images/josie4.jpg"); // Use fallback image if it doesn't exist
+                  }
+                })()}
+              ></img>
             </div>
           );
         })}
@@ -40,10 +48,16 @@ function PaintingOverview(params) {
               className="full-screen-image-container"
               onClick={hideFullScreen}
             >
-              {/* <img
-                id="full-image"
-                src={require(`../assets/images/${fullScreenImage}.jpg`)}
-              ></img> */}
+              src=
+              {(() => {
+                try {
+                  return require(`../assets/images/${fullScreenImage}.jpg`);
+                } catch (error) {
+                  console.log(error);
+                  console.log(fullScreenImage);
+                  return require("../assets/images/josie4.jpg"); // Use fallback image if it doesn't exist
+                }
+              })()}
             </div>
           ) : null}
         </>

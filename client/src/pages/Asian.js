@@ -21,7 +21,7 @@ function Asian() {
 
   return (
     <>
-      <PaintingOverview paintings={paintings} />
+      <PaintingOverview paintings={paintings} category_name="asian" />
     </>
   );
 }

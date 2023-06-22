@@ -21,7 +21,7 @@ function Portrait() {
 
   return (
     <>
-      <PaintingOverview paintings={paintings} />
+      <PaintingOverview paintings={paintings} category_name="portrait" />
     </>
   );
 }

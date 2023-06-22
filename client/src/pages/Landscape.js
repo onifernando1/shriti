@@ -21,7 +21,7 @@ function Landscape() {
 
   return (
     <>
-      <PaintingOverview paintings={paintings} />
+      <PaintingOverview paintings={paintings} category_name="landscape" />
     </>
   );
 }

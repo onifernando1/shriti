@@ -21,7 +21,7 @@ function Dancers() {
 
   return (
     <>
-      <PaintingOverview paintings={paintings} />
+      <PaintingOverview paintings={paintings} category_name="dancers" />
     </>
   );
 }

@@ -21,7 +21,7 @@ function Other() {
 
   return (
     <>
-      <PaintingOverview paintings={paintings} />
+      <PaintingOverview paintings={paintings} category_name="other" />
     </>
   );
 }

@@ -21,7 +21,7 @@ function Seascape() {
 
   return (
     <>
-      <PaintingOverview paintings={paintings} />
+      <PaintingOverview paintings={paintings} category_name="seascape" />
     </>
   );
 }

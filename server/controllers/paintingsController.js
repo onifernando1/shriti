@@ -60,3 +60,38 @@ exports.other = asyncHandler(async (req, res, next) => {
   }).exec();
   res.json({ painting_list: otherPaintings });
 });
+
+exports.nudes = asyncHandler(async (req, res, next) => {
+  const otherPaintings = await Painting.find({
+    category: "nudes",
+  }).exec();
+  res.json({ painting_list: otherPaintings });
+});
+
+exports.cyclists = asyncHandler(async (req, res, next) => {
+  const otherPaintings = await Painting.find({
+    category: "cyclists",
+  }).exec();
+  res.json({ painting_list: otherPaintings });
+});
+
+exports.littlepeople = asyncHandler(async (req, res, next) => {
+  const otherPaintings = await Painting.find({
+    category: "littlepeople",
+  }).exec();
+  res.json({ painting_list: otherPaintings });
+});
+
+exports.dancers = asyncHandler(async (req, res, next) => {
+  const otherPaintings = await Painting.find({
+    category: "dancers",
+  }).exec();
+  res.json({ painting_list: otherPaintings });
+});
+
+exports.seascape = asyncHandler(async (req, res, next) => {
+  const otherPaintings = await Painting.find({
+    category: "seascape",
+  }).exec();
+  res.json({ painting_list: otherPaintings });
+});

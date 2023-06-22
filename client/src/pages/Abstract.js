@@ -21,7 +21,7 @@ function Abstract() {
 
   return (
     <>
-      <PaintingOverview paintings={paintings} />
+      <PaintingOverview paintings={paintings} category_name="abstract" />
     </>
   );
 }

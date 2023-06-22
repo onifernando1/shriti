@@ -17,6 +17,7 @@ function PaintingOverview(props) {
 
   return (
     <div className="portfolio-container">
+      <div className="category-name">{props.category_name}</div>
       <div className="portfolio-paintings-container">
         {paintings.map((painting) => {
           return (

@@ -69,6 +69,9 @@ function Navbar() {
                     </div>
                     {dropdownReveal ? (
                       <>
+                        <Link to="/portfolio" onClick={hideNavbar}>
+                          all
+                        </Link>
                         <Link to="/abstract" onClick={hideNavbar}>
                           abstract
                         </Link>

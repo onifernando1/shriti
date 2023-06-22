@@ -65,7 +65,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: white;
   display: flex;
   justify-content: center;
 }
@@ -80,7 +80,8 @@
   #full-image {
     /* height: 70%; */
     max-width: 90vw;
-    aspect-ratio: 1 / 1;
+    /* max-height: 90vw; */
+    /* aspect-ratio: 1 / 1; */
     object-fit: cover;
   }
 }

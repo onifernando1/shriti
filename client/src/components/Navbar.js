@@ -56,7 +56,11 @@ function Navbar() {
                     </div>
 
                     {dropdownReveal ? null : (
-                      <Link onClick={hideNavbar} to="/">
+                      <Link
+                        onClick={hideNavbar}
+                        className="home-top-link"
+                        to="/"
+                      >
                         home
                       </Link>
                     )}
@@ -75,11 +79,24 @@ function Navbar() {
                         <Link to="/abstract" onClick={hideNavbar}>
                           abstract
                         </Link>
-                        <Link to="/landscape" onClick={hideNavbar}>
-                          landscape/seascape
+                        <Link to="/seascape" onClick={hideNavbar}>
+                          seascape
                         </Link>
-                        <Link to="/figurative" onClick={hideNavbar}>
-                          figurative
+                        <Link to="/landscape" onClick={hideNavbar}>
+                          landscape
+                        </Link>
+                        <Link to="/nudes" onClick={hideNavbar}>
+                          nudes
+                        </Link>
+                        <Link to="/dancers" onClick={hideNavbar}>
+                          dancers
+                        </Link>
+                        <Link to="/cyclists" onClick={hideNavbar}>
+                          cyclists
+                        </Link>
+
+                        <Link to="/littlepeople" onClick={hideNavbar}>
+                          little people
                         </Link>
                         <Link to="/portrait" onClick={hideNavbar}>
                           portrait
@@ -90,20 +107,8 @@ function Navbar() {
                         <Link to="/asian" onClick={hideNavbar}>
                           asian
                         </Link>
-                        <Link to="/nudes" onClick={hideNavbar}>
-                          nudes
-                        </Link>
-                        <Link to="/cyclists" onClick={hideNavbar}>
-                          cyclists
-                        </Link>
-                        <Link to="/littlepeople" onClick={hideNavbar}>
-                          little people
-                        </Link>
-                        <Link to="/dancers" onClick={hideNavbar}>
-                          dancers
-                        </Link>
-                        <Link to="/seascape" onClick={hideNavbar}>
-                          seascape
+                        <Link to="/other" onClick={hideNavbar}>
+                          other
                         </Link>
                       </>
                     ) : null}
@@ -152,15 +157,35 @@ function Navbar() {
                         </Link>
                       </div>
                       <div>
+                        <Link to="/seascape" onClick={hideDropdown}>
+                          seascape
+                        </Link>
+                      </div>{" "}
+                      <div>
                         <Link to="/landscape" onClick={hideDropdown}>
-                          landscape/seascape
+                          landscape
                         </Link>
                       </div>
                       <div>
-                        <Link to="/figurative" onClick={hideDropdown}>
-                          figurative
+                        <Link to="/nudes" onClick={hideDropdown}>
+                          nudes
                         </Link>
-                      </div>
+                      </div>{" "}
+                      <div>
+                        <Link to="/dancers" onClick={hideDropdown}>
+                          dancers
+                        </Link>
+                      </div>{" "}
+                      <div>
+                        <Link to="/cyclists" onClick={hideDropdown}>
+                          cyclists
+                        </Link>
+                      </div>{" "}
+                      <div>
+                        <Link to="/littlepeople" onClick={hideDropdown}>
+                          little people
+                        </Link>
+                      </div>{" "}
                       <div>
                         <Link to="/portrait" onClick={hideDropdown}>
                           portrait
@@ -179,31 +204,6 @@ function Navbar() {
                       <div>
                         <Link to="/other" onClick={hideDropdown}>
                           other
-                        </Link>
-                      </div>{" "}
-                      <div>
-                        <Link to="/nudes" onClick={hideDropdown}>
-                          nudes
-                        </Link>
-                      </div>{" "}
-                      <div>
-                        <Link to="/cyclists" onClick={hideDropdown}>
-                          cyclists
-                        </Link>
-                      </div>{" "}
-                      <div>
-                        <Link to="/littlepeople" onClick={hideDropdown}>
-                          littlepeople
-                        </Link>
-                      </div>{" "}
-                      <div>
-                        <Link to="/dancers" onClick={hideDropdown}>
-                          dancers
-                        </Link>
-                      </div>{" "}
-                      <div>
-                        <Link to="/seascape" onClick={hideDropdown}>
-                          seascape
                         </Link>
                       </div>{" "}
                     </div>

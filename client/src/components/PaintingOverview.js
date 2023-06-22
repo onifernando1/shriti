@@ -1,8 +1,8 @@
 import "../assets/styles/overview.css";
 import { useState, setState } from "react";
 
-function PaintingOverview(params) {
-  const paintings = params.paintings;
+function PaintingOverview(props) {
+  const paintings = props.paintings;
   const [fullScreenImage, setFullScreenImage] = useState("");
   const [showFullScreen, setShowFullScreen] = useState(false);
 

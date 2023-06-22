@@ -68,8 +68,21 @@ function Navbar() {
                       onClick={toggleDropdown}
                       className="mobile-portfolio-dropdown-container"
                     >
-                      <div className="dropdown-portfolio-title">portfolio</div>
-                      <div className="down-arrow">⌄</div>
+                      {dropdownReveal ? (
+                        <div className="dropdown-portfolio-title reveal">
+                          portfolio
+                        </div>
+                      ) : (
+                        <div className="dropdown-portfolio-title">
+                          portfolio
+                        </div>
+                      )}
+
+                      {dropdownReveal ? (
+                        <div className="down-arrow reveal">⌄</div>
+                      ) : (
+                        <div className="down-arrow">⌄</div>
+                      )}
                     </div>
                     {dropdownReveal ? (
                       <>

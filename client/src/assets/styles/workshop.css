@@ -10,9 +10,11 @@
 .past {
   font-size: 1.2rem;
   width: 20rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 #workshop-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }

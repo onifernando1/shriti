@@ -50,6 +50,7 @@ function PaintingOverview(props) {
               onClick={hideFullScreen}
             >
               <img
+                id="full-image"
                 src={(() => {
                   try {
                     return require(`../assets/images/${fullScreenImage}.jpg`);

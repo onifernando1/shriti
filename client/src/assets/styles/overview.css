@@ -68,6 +68,9 @@
   background-color: white;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -84,6 +87,10 @@
     /* aspect-ratio: 1 / 1; */
     object-fit: cover;
   }
+}
+
+#full-image {
+  max-height: 80%;
 }
 
 .category-name {

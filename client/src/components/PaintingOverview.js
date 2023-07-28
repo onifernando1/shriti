@@ -4,6 +4,7 @@ import { useState, setState } from "react";
 function PaintingOverview(props) {
   const paintings = props.paintings;
   const [fullScreenImage, setFullScreenImage] = useState("");
+  const [fullScreenImageName, setFullScreenImageName] = useState("");
   const [showFullScreen, setShowFullScreen] = useState(false);
 
   const displayFullScreenImage = (name) => {
@@ -27,7 +28,10 @@ function PaintingOverview(props) {
               id={painting.image}
             >
               <img
-                onClick={() => displayFullScreenImage(painting.image)}
+                onClick={() => {
+                  displayFullScreenImage(painting.image);
+                  setFullScreenImageName(painting.title);
+                }}
                 src={(() => {
                   try {
                     return require(`../assets/images/${painting.image}.jpg`);
@@ -61,6 +65,9 @@ function PaintingOverview(props) {
                   }
                 })()}
               ></img>
+              <div className="fullscreen-painting-title">
+                {fullScreenImageName}
+              </div>
             </div>
           ) : null}
         </>

@@ -51,7 +51,13 @@ function Navbar() {
               {navbarReveal ? (
                 <>
                   <div className="links">
-                    <div className="close-navbar" onClick={hideNavbar}>
+                    <div
+                      className="close-navbar"
+                      onClick={() => {
+                        hideNavbar();
+                        hideDropdown();
+                      }}
+                    >
                       X
                     </div>
 
@@ -86,41 +92,113 @@ function Navbar() {
                     </div>
                     {dropdownReveal ? (
                       <>
-                        <Link to="/portfolio" onClick={hideNavbar}>
+                        <Link
+                          to="/portfolio"
+                          onClick={() => {
+                            hideNavbar();
+                            toggleDropdown();
+                          }}
+                        >
                           all
                         </Link>
-                        <Link to="/abstract" onClick={hideNavbar}>
+                        <Link
+                          to="/abstract"
+                          onClick={() => {
+                            hideNavbar();
+                            toggleDropdown();
+                          }}
+                        >
                           abstract
                         </Link>
-                        <Link to="/seascape" onClick={hideNavbar}>
+                        <Link
+                          to="/seascape"
+                          onClick={() => {
+                            hideNavbar();
+                            toggleDropdown();
+                          }}
+                        >
                           seascape
                         </Link>
-                        <Link to="/landscape" onClick={hideNavbar}>
+                        <Link
+                          to="/landscape"
+                          onClick={() => {
+                            hideNavbar();
+                            toggleDropdown();
+                          }}
+                        >
                           landscape
                         </Link>
-                        <Link to="/nudes" onClick={hideNavbar}>
+                        <Link
+                          to="/nudes"
+                          onClick={() => {
+                            hideNavbar();
+                            toggleDropdown();
+                          }}
+                        >
                           nudes
                         </Link>
-                        <Link to="/dancers" onClick={hideNavbar}>
+                        <Link
+                          to="/dancers"
+                          onClick={() => {
+                            hideNavbar();
+                            toggleDropdown();
+                          }}
+                        >
                           dancers
                         </Link>
-                        <Link to="/cyclists" onClick={hideNavbar}>
+                        <Link
+                          to="/cyclists"
+                          onClick={() => {
+                            hideNavbar();
+                            toggleDropdown();
+                          }}
+                        >
                           cyclists
                         </Link>
 
-                        <Link to="/littlepeople" onClick={hideNavbar}>
+                        <Link
+                          to="/littlepeople"
+                          onClick={() => {
+                            hideNavbar();
+                            toggleDropdown();
+                          }}
+                        >
                           little people
                         </Link>
-                        <Link to="/portrait" onClick={hideNavbar}>
+                        <Link
+                          to="/portrait"
+                          onClick={() => {
+                            hideNavbar();
+                            toggleDropdown();
+                          }}
+                        >
                           portrait
                         </Link>
-                        <Link to="/animals" onClick={hideNavbar}>
+                        <Link
+                          to="/animals"
+                          onClick={() => {
+                            hideNavbar();
+                            toggleDropdown();
+                          }}
+                        >
                           animals
                         </Link>
-                        <Link to="/asian" onClick={hideNavbar}>
+                        <Link
+                          to="/asian"
+                          onClick={() => {
+                            hideNavbar();
+                            toggleDropdown();
+                          }}
+                        >
                           asian
                         </Link>
-                        <Link to="/other" onClick={hideNavbar}>
+                        <Link
+                          to="/other"
+                          onClick={() => {
+                            hideNavbar();
+                            toggleDropdown();
+                          }}
+                        >
                           other
                         </Link>
                       </>

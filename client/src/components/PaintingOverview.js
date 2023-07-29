@@ -37,11 +37,11 @@ function PaintingOverview(props) {
     const isRightSwipe = distance < -minSwipeDistance;
     if (isLeftSwipe) {
       console.log("left");
-      setFullScreenPaintingIndex(fullScreenPaintingIndex - 1);
+      setFullScreenPaintingIndex(fullScreenPaintingIndex + 1);
     }
     if (isRightSwipe) {
       console.log("right");
-      setFullScreenPaintingIndex(fullScreenPaintingIndex + 1);
+      setFullScreenPaintingIndex(fullScreenPaintingIndex - 1);
     }
   };
 
@@ -160,16 +160,18 @@ function PaintingOverview(props) {
                     </>
                   ) : null}
                 </div>
-                <div className="fullscreen-painting-title">
-                  {fullScreenPainting.title}
-                </div>
+                <div className="fullscreen-painting-info">
+                  <div className="fullscreen-painting-title">
+                    {fullScreenPainting.title}
+                  </div>
 
-                <div className="fullscreen-painting-title">
-                  {fullScreenPainting.medium}
-                </div>
+                  <div className="fullscreen-painting-title">
+                    {fullScreenPainting.medium}
+                  </div>
 
-                <div className="fullscreen-painting-title">
-                  {fullScreenPainting.size}
+                  <div className="fullscreen-painting-title">
+                    {fullScreenPainting.size}
+                  </div>
                 </div>
               </div>
             </div>

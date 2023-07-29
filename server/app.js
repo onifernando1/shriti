@@ -16,6 +16,8 @@ const bodyParser = require("body-parser");
 const paintingsRouter = require("./routes/paintings");
 const cors = require("cors");
 const mongoDb = process.env.SECRET_KEY;
+const nodemailer = require("nodemailer");
+
 mongoose.connect(mongoDb, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
@@ -134,6 +136,35 @@ app.use(function (err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render("error");
+});
+
+//nodemailer
+
+let transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    type: "OAuth2",
+    user: process.env.MAIL_USERNAME,
+    pass: process.env.MAIL_PASSWORD,
+    clientId: process.env.OAUTH_CLIENTID,
+    clientSecret: process.env.OAUTH_CLIENT_SECRET,
+    refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+  },
+});
+
+let mailOptions = {
+  from: "shritfernandowebsite@gmail.com",
+  to: "shritfernandowebsite@gmail.com",
+  subject: "Nodemailer Project",
+  text: "Hi from your nodemailer project",
+};
+
+transporter.sendMail(mailOptions, function (err, data) {
+  if (err) {
+    console.log("Error " + err);
+  } else {
+    console.log("Email sent successfully");
+  }
 });
 
 module.exports = app;

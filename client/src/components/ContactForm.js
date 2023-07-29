@@ -35,6 +35,7 @@ export const ContactUs = () => {
       navigate("/");
     } catch (error) {
       console.error(error);
+      navigate("/");
     }
   };
 

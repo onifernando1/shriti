@@ -1,5 +1,6 @@
 import "../assets/styles/overview.css";
 import { useState, setState, useEffect } from "react";
+import { isMobile } from "react-device-detect";
 
 function PaintingOverview(props) {
   const paintings = props.paintings;
@@ -98,28 +99,38 @@ function PaintingOverview(props) {
                       }
                     })()}
                   ></img>
-                  <div
-                    className="next"
-                    onClick={() => {
-                      console.log("next");
-                      console.log(fullScreenPainting.title);
-                      setFullScreenPaintingIndex(fullScreenPaintingIndex + 1);
-                      // setFullScreenPainting(paintings[fullScreenPaintingIndex]);
-                      // console.log(fullScreenPainting.title);
-                    }}
-                  >
-                    <img src={require("../assets/images/next.png")}></img>
-                  </div>
-                  <div
-                    className="previous"
-                    onClick={() => {
-                      console.log("previous");
-                      console.log(fullScreenPainting.title);
-                      setFullScreenPaintingIndex(fullScreenPaintingIndex - 1);
-                    }}
-                  >
-                    <img src={require("../assets/images/previous.png")}></img>
-                  </div>
+                  {!isMobile ? (
+                    <>
+                      <div
+                        className="next"
+                        onClick={() => {
+                          console.log("next");
+                          console.log(fullScreenPainting.title);
+                          setFullScreenPaintingIndex(
+                            fullScreenPaintingIndex + 1
+                          );
+                          // setFullScreenPainting(paintings[fullScreenPaintingIndex]);
+                          // console.log(fullScreenPainting.title);
+                        }}
+                      >
+                        <img src={require("../assets/images/next.png")}></img>
+                      </div>
+                      <div
+                        className="previous"
+                        onClick={() => {
+                          console.log("previous");
+                          console.log(fullScreenPainting.title);
+                          setFullScreenPaintingIndex(
+                            fullScreenPaintingIndex - 1
+                          );
+                        }}
+                      >
+                        <img
+                          src={require("../assets/images/previous.png")}
+                        ></img>
+                      </div>
+                    </>
+                  ) : null}
                 </div>
                 <div className="fullscreen-painting-title">
                   {fullScreenPainting.title}

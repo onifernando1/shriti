@@ -92,6 +92,13 @@
 }
 
 @media (max-width: 768px) {
+  .full-screen-image-inner-container {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
   #full-image {
     max-width: 90vw;
     max-height: 90vh;

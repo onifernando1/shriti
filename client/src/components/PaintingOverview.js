@@ -9,6 +9,9 @@ function PaintingOverview(props) {
   const [showFullScreen, setShowFullScreen] = useState(false);
   const [fullScreenPainting, setFullScreenPainting] = useState("");
   const [fullScreenPaintingIndex, setFullScreenPaintingIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  const minSwipeDistance = 50;
 
   useEffect(() => {
     // When fullScreenPaintingIndex changes, update fullScreenPainting state
@@ -19,6 +22,28 @@ function PaintingOverview(props) {
       setFullScreenPainting(paintings[fullScreenPaintingIndex]);
     }
   }, [fullScreenPaintingIndex, paintings]);
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) {
+      console.log("left");
+      setFullScreenPaintingIndex(fullScreenPaintingIndex - 1);
+    }
+    if (isRightSwipe) {
+      console.log("right");
+      setFullScreenPaintingIndex(fullScreenPaintingIndex + 1);
+    }
+  };
 
   const displayFullScreenImage = (name) => {
     setFullScreenImage(name);
@@ -81,6 +106,9 @@ function PaintingOverview(props) {
             <div
               className="full-screen-image-container"
               // onClick={hideFullScreen}
+              onTouchStart={onTouchStart}
+              onTouchMove={onTouchMove}
+              onTouchEnd={onTouchEnd}
             >
               <div className="full-screen-image-inner-container">
                 <div className="close" onClick={hideFullScreen}>

@@ -1,11 +1,23 @@
 import "../assets/styles/overview.css";
-import { useState, setState } from "react";
+import { useState, setState, useEffect } from "react";
 
 function PaintingOverview(props) {
   const paintings = props.paintings;
   const [fullScreenImage, setFullScreenImage] = useState("");
   const [fullScreenImageName, setFullScreenImageName] = useState("");
   const [showFullScreen, setShowFullScreen] = useState(false);
+  const [fullScreenPainting, setFullScreenPainting] = useState("");
+  const [fullScreenPaintingIndex, setFullScreenPaintingIndex] = useState(0);
+
+  useEffect(() => {
+    // When fullScreenPaintingIndex changes, update fullScreenPainting state
+    if (
+      fullScreenPaintingIndex >= 0 &&
+      fullScreenPaintingIndex < paintings.length
+    ) {
+      setFullScreenPainting(paintings[fullScreenPaintingIndex]);
+    }
+  }, [fullScreenPaintingIndex, paintings]);
 
   const displayFullScreenImage = (name) => {
     setFullScreenImage(name);
@@ -14,6 +26,20 @@ function PaintingOverview(props) {
 
   const hideFullScreen = () => {
     setShowFullScreen(false);
+  };
+
+  const findCurrentPaintingIndex = (currentFullScreenPainting) => {
+    console.log(paintings);
+    let tempIndex = 0;
+    let foundIndex;
+    console.log(currentFullScreenPainting._id);
+
+    while (paintings[tempIndex]._id != currentFullScreenPainting._id) {
+      tempIndex += 1;
+    }
+    foundIndex = tempIndex;
+    console.log(foundIndex);
+    setFullScreenPaintingIndex(foundIndex);
   };
 
   return (
@@ -31,6 +57,8 @@ function PaintingOverview(props) {
                 onClick={() => {
                   displayFullScreenImage(painting.image);
                   setFullScreenImageName(painting.title);
+                  setFullScreenPainting(painting);
+                  findCurrentPaintingIndex(painting);
                 }}
                 src={(() => {
                   try {
@@ -51,22 +79,59 @@ function PaintingOverview(props) {
           {fullScreenImage ? (
             <div
               className="full-screen-image-container"
-              onClick={hideFullScreen}
+              // onClick={hideFullScreen}
             >
-              <img
-                id="full-image"
-                src={(() => {
-                  try {
-                    return require(`../assets/images/${fullScreenImage}.jpg`);
-                  } catch (error) {
-                    console.log(error);
-                    console.log(fullScreenImage);
-                    return require("../assets/images/josie4.jpg"); // Use fallback image if it doesn't exist
-                  }
-                })()}
-              ></img>
-              <div className="fullscreen-painting-title">
-                {fullScreenImageName}
+              <div className="full-screen-image-inner-container">
+                <div className="close" onClick={hideFullScreen}>
+                  X
+                </div>
+                <div className="image-carousel-container">
+                  <img
+                    id="full-image"
+                    src={(() => {
+                      try {
+                        return require(`../assets/images/${fullScreenPainting.image}.jpg`);
+                      } catch (error) {
+                        console.log(error);
+                        console.log(fullScreenPainting.image);
+                        return require("../assets/images/josie4.jpg"); // Use fallback image if it doesn't exist
+                      }
+                    })()}
+                  ></img>
+                  <div
+                    className="next"
+                    onClick={() => {
+                      console.log("next");
+                      console.log(fullScreenPainting.title);
+                      setFullScreenPaintingIndex(fullScreenPaintingIndex + 1);
+                      // setFullScreenPainting(paintings[fullScreenPaintingIndex]);
+                      // console.log(fullScreenPainting.title);
+                    }}
+                  >
+                    <img src={require("../assets/images/next.png")}></img>
+                  </div>
+                  <div
+                    className="previous"
+                    onClick={() => {
+                      console.log("previous");
+                      console.log(fullScreenPainting.title);
+                      setFullScreenPaintingIndex(fullScreenPaintingIndex - 1);
+                    }}
+                  >
+                    <img src={require("../assets/images/previous.png")}></img>
+                  </div>
+                </div>
+                <div className="fullscreen-painting-title">
+                  {fullScreenPainting.title}
+                </div>
+
+                <div className="fullscreen-painting-title">
+                  {fullScreenPainting.medium}
+                </div>
+
+                <div className="fullscreen-painting-title">
+                  {fullScreenPainting.size}
+                </div>
               </div>
             </div>
           ) : null}

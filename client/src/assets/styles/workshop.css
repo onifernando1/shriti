@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 2rem;
+  margin-top: 1.6rem;
 }
 
 @media (max-width: 768px) {
@@ -17,7 +17,7 @@
   font-size: 1.2rem;
   width: 20rem;
   margin-bottom: 2rem;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 
 #workshop-title {

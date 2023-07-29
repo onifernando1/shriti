@@ -5,7 +5,7 @@
   flex-direction: column;
   padding: 20px;
   max-width: 100%;
-  margin-top: 2rem;
+  margin-top: 0.7rem;
   position: relative;
   /* z-index: 1; */
 
@@ -121,7 +121,7 @@
 }
 
 .fullscreen-painting-title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .fullscreen-painting-info {

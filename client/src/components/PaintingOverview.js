@@ -37,11 +37,15 @@ function PaintingOverview(props) {
     const isRightSwipe = distance < -minSwipeDistance;
     if (isLeftSwipe) {
       console.log("left");
-      setFullScreenPaintingIndex(fullScreenPaintingIndex + 1);
+      if (fullScreenPaintingIndex + 1 < paintings.length) {
+        setFullScreenPaintingIndex(fullScreenPaintingIndex + 1);
+      }
     }
     if (isRightSwipe) {
       console.log("right");
-      setFullScreenPaintingIndex(fullScreenPaintingIndex - 1);
+      if (fullScreenPaintingIndex - 1 >= 0) {
+        setFullScreenPaintingIndex(fullScreenPaintingIndex - 1);
+      }
     }
   };
 
@@ -132,11 +136,12 @@ function PaintingOverview(props) {
                       <div
                         className="next"
                         onClick={() => {
-                          console.log("next");
-                          console.log(fullScreenPainting.title);
-                          setFullScreenPaintingIndex(
-                            fullScreenPaintingIndex + 1
-                          );
+                          //marker
+                          if (fullScreenPaintingIndex + 1 < paintings.length) {
+                            setFullScreenPaintingIndex(
+                              fullScreenPaintingIndex + 1
+                            );
+                          }
                           // setFullScreenPainting(paintings[fullScreenPaintingIndex]);
                           // console.log(fullScreenPainting.title);
                         }}
@@ -146,11 +151,11 @@ function PaintingOverview(props) {
                       <div
                         className="previous"
                         onClick={() => {
-                          console.log("previous");
-                          console.log(fullScreenPainting.title);
-                          setFullScreenPaintingIndex(
-                            fullScreenPaintingIndex - 1
-                          );
+                          if (fullScreenPaintingIndex - 1 >= 0) {
+                            setFullScreenPaintingIndex(
+                              fullScreenPaintingIndex - 1
+                            );
+                          }
                         }}
                       >
                         <img

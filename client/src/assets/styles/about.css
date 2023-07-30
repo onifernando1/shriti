@@ -31,3 +31,9 @@
     margin-top: 6rem;
   }
 }
+
+@media (max-width: 768px) {
+  .shriti-portrait {
+    margin-bottom: 0;
+  }
+}

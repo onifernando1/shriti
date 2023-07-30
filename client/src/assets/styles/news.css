@@ -32,3 +32,19 @@
     width: 80%;
   }
 }
+
+.written-news {
+  margin-bottom: 3rem;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .written-news {
+    width: 21rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}

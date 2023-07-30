@@ -33,19 +33,25 @@
   gap: 5px;
   flex-direction: column;
   height: 2rem;
-  margin-left: 700px;
-  margin-top: 40px;
+  /* margin-left: 700px; */
+  /* margin-top: 20px; */
   position: absolute;
   justify-content: flex-start;
   align-items: center;
+  /* top: 30%; */
+  /* right: 8%; */
+  /* top: 30px;
+  right: 30px; */
+  top: 1rem;
+  right: 2rem;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .hamburger-lines {
     margin-left: 300px;
-    margin-top: 60px;
+    margin-top: 20px;
   }
-}
+} */
 
 .line1,
 .line2,
@@ -156,8 +162,12 @@
   font-size: 1.5rem;
   font-weight: bold;
   position: absolute;
-  top: -3%;
-  right: 20%;
+  /* top: -3%;
+  right: 24%; */
+  /* top: -15px;
+  right: 95px; */
+  top: -2rem;
+  right: 6rem;
   /* margin-top: 210px; */
   /* margin-left: 250px; */
 }

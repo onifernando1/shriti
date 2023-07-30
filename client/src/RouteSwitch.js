@@ -46,6 +46,7 @@ const RouteSwitch = () => {
           <Route path="/littlepeople" element={<Littlepeople />} />
           <Route path="/dancers" element={<Dancers />} />
           <Route path="/seascape" element={<Seascape />} />
+          <Route path="/other" element={<Other />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -26,3 +26,9 @@
 .news {
   width: 25rem;
 }
+
+@media (max-width: 768px) {
+  .news {
+    width: 80%;
+  }
+}

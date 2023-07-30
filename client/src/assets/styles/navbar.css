@@ -58,7 +58,7 @@
 
 .links {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: white;
@@ -175,7 +175,7 @@
 }
 
 .home-top-link {
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
 }
 
 @media (max-width: 768px) {

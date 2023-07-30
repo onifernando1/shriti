@@ -6,13 +6,17 @@ function Workshops() {
       <div className="workshop-container">
         <div className="upcoming">
           <div id="workshop-title">upcoming workshops</div>
-          <div>sunday 25 june - textured art</div>
+          <div className="individual-workshop">
+            sunday 6th august - textured art
+          </div>
+          <div className="individual-workshop">
+            sunday 10th september - pen and ink
+          </div>
         </div>
         <div className="past">
           <div id="workshop-title">past workshops</div>
-          <div>3rd june - textured art</div>
-          <img></img>
-          <div>PHOTOS</div>
+          <div className="individual-workshop">25th june - textured art</div>
+          <div className="individual-workshop">3rd june - textured art</div>
         </div>
       </div>
     </div>

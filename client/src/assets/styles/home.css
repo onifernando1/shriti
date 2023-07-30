@@ -20,11 +20,17 @@
 
 @media (max-width: 768px) {
   .home-container img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     margin-top: 3rem;
     /* object-fit: fill; */
   }
+}
+
+.home-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {

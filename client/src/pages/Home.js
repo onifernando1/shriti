@@ -7,7 +7,7 @@ function Home() {
       {isMobile ? (
         <>
           <div className="logo">shriti fernando</div>
-          <div>
+          <div className="home-image-container">
             <img src={require("../assets/images/backgroundfinal.jpg")}></img>
           </div>
         </>

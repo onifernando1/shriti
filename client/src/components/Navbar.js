@@ -51,6 +51,7 @@ function Navbar() {
               {navbarReveal ? (
                 <>
                   <div className="links">
+                    {/* <div className="links-inner-container"> */}
                     <div
                       className="close-navbar"
                       onClick={() => {
@@ -92,7 +93,7 @@ function Navbar() {
                     </div>
                     {dropdownReveal ? (
                       <>
-                        <Link
+                        {/* <Link
                           to="/portfolio"
                           onClick={() => {
                             hideNavbar();
@@ -100,7 +101,7 @@ function Navbar() {
                           }}
                         >
                           all
-                        </Link>
+                        </Link> */}
                         <Link
                           to="/abstract"
                           onClick={() => {
@@ -220,6 +221,7 @@ function Navbar() {
                         </Link>
                       </>
                     )}
+                    {/* </div> */}
                   </div>
                 </>
               ) : null}
@@ -234,7 +236,7 @@ function Navbar() {
               <Link onMouseOver={hideDropdown} to="/">
                 home
               </Link>
-              <Link to="/portfolio">
+              <Link to="/abstract">
                 <div onMouseEnter={showDropdown} onClick={hideDropdown}>
                   portoflio
                 </div>

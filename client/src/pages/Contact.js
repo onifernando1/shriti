@@ -4,7 +4,7 @@ require("../assets/styles/contact.css");
 function Contact() {
   return (
     <div className="contact-container">
-      <div className="contact-title">contact</div>
+      {/* <div className="contact-title">contact</div> */}
       <ContactUs />
     </div>
   );

@@ -31,7 +31,7 @@ router.post("/send-email", async (req, res) => {
 
   let mailOptions = {
     from: "shritfernandowebsite@gmail.com",
-    to: "shritfernandowebsite@gmail.com",
+    to: "skpops@hotmail.co.uk",
     subject: "Nodemailer Project",
     text: `Name: ${user_name}, Email: ${user_email}, Message: ${message}`,
   };

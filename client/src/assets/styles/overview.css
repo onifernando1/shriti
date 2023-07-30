@@ -121,7 +121,7 @@
 }
 
 .fullscreen-painting-title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .fullscreen-painting-info {
@@ -162,7 +162,7 @@
   .close {
     position: absolute;
     /* top: 6%; */
-    top: 7%;
+    top: 4%;
     right: 5%;
   }
 }

@@ -35,6 +35,12 @@
 
 body {
   /* background-color: red; */
+  background-color: black;
+  color: white;
   font-family: "Questrial";
   overflow-x: hidden;
+}
+
+div {
+  color: white;
 }

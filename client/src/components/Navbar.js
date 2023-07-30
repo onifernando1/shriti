@@ -6,6 +6,7 @@ import { isMobile } from "react-device-detect";
 function Navbar() {
   const [navbarReveal, setNavbarReveal] = useState(false);
   const [dropdownReveal, setDropdownReveal] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const showNavbar = () => {
     setNavbarReveal(true);
@@ -36,6 +37,29 @@ function Navbar() {
       setDropdownReveal(true);
     }
   };
+
+  // const darkmode = () => {
+  //   alert("dark");
+  //   if (!isDarkMode) {
+  //     document.body.style.backgroundColor = "black";
+  //     const links = document.querySelectorAll("a");
+  //     links.forEach((link) => {
+  //       link.style.color = "white";
+  //     });
+  //     const divs = document.querySelectorAll("div");
+  //     divs.forEach((div) => {
+  //       div.style.color = "white";
+  //     });
+  //     divs.forEach((div) => {
+  //       div.style.backgroundColor = "black";
+  //     });
+
+  //     const fullScreenBackground = document.getElementById(
+  //       "full-screen-image-container"
+  //     );
+  //     console.log(fullScreenBackground);
+  //   }
+  // };
 
   return (
     <>
@@ -232,6 +256,7 @@ function Navbar() {
         <div>
           <div className="pc-navbar-container">
             <div className="pc-logo">shriti fernando</div>
+            {/* <div onClick={darkmode}>night</div> */}
             <div className="pc-links">
               <Link onMouseOver={hideDropdown} to="/">
                 home

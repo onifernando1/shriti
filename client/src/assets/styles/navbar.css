@@ -1,6 +1,8 @@
 .navbar-container a {
   text-decoration: none;
-  color: black;
+  /* color: black; */
+  color: white;
+  /* marker */
 }
 
 .navbar-container {
@@ -14,7 +16,7 @@
 
 .navbar {
   position: fixed;
-  background-color: white;
+  /* background-color: white; */
   top: 0;
   height: 5rem;
   width: 100%;
@@ -23,7 +25,7 @@
 @media (max-width: 768px) {
   .navbar {
     /* transform: translateX(1); */
-    background-color: rgba(255, 255, 255, 0);
+    /* background-color: rgba(255, 255, 255, 0); */
     z-index: 2;
   }
 }
@@ -59,7 +61,7 @@
   height: 3px;
   width: 30px;
   border-radius: 10px;
-  background-color: black;
+  background-color: white;
 }
 
 .links {
@@ -67,7 +69,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: white;
+  /* background-color: white; */
+  background-color: black;
   position: fixed;
   top: 0;
   left: 0;
@@ -116,7 +119,8 @@
 
 .pc-links a {
   text-decoration: none;
-  color: black;
+  color: white;
+  /* marker */
   font-size: 1.3rem;
 }
 
@@ -139,6 +143,10 @@
   z-index: 100;
   padding: 5px;
   /* display: none; */
+}
+
+.dropdown > div > a {
+  color: black;
 }
 
 .mobile-portfolio-dropdown-container {

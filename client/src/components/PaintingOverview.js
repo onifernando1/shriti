@@ -109,6 +109,7 @@ function PaintingOverview(props) {
           {fullScreenImage ? (
             <div
               className="full-screen-image-container"
+              id="full-screen-image-container"
               // onClick={hideFullScreen}
               onTouchStart={onTouchStart}
               onTouchMove={onTouchMove}

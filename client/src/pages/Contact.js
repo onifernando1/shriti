@@ -5,6 +5,7 @@ function Contact() {
   return (
     <div className="contact-container">
       {/* <div className="contact-title">contact</div> */}
+      <div>{process.env.REACT_APP}</div>
       <ContactUs />
     </div>
   );

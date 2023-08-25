@@ -4,19 +4,10 @@ import { useState, setState } from "react";
 import axios from "axios";
 import "../assets/styles/overview.css";
 import PaintingOverview from "../components/PaintingOverview";
+import { allPaintingsList } from "../data/data";
 
 function Portfolio() {
-  const [paintings, setPaintings] = useState([]);
-  useEffect(() => {
-    axios
-      .get(`http://localhost:3000/paintings`)
-      .then((response) => {
-        setPaintings(response.data.painting_list);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
+  const [paintings, setPaintings] = useState(allPaintingsList);
 
   return (
     <>

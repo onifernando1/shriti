@@ -1,15 +1,15 @@
 import React, { useRef, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 require("../assets/styles/contact-form.css");
 
 export const ContactUs = () => {
   axios.defaults.withCredentials = true;
+  const form = useRef();
 
   const navigate = useNavigate();
-
-  const form = useRef();
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [name, setName] = useState("");
@@ -37,6 +37,31 @@ export const ContactUs = () => {
       console.error(error);
       navigate("/");
     }
+  };
+
+  const EmailContactForm = () => {
+    const sendEmail = (e) => {
+      e.preventDefault();
+
+      emailjs
+        .sendForm(
+          "YOUR_SERVICE_ID",
+          "YOUR_TEMPLATE_ID",
+          form.current,
+          "YOUR_PUBLIC_KEY"
+        )
+        .then(
+          (result) => {
+            // show the user a success message
+            navigate("/");
+          },
+          (error) => {
+            // show the user an error
+            console.error(error);
+            navigate("/");
+          }
+        );
+    };
   };
 
   return (

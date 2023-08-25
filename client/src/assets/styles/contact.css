@@ -29,3 +29,12 @@
 .email-link {
   font-size: 1.2rem;
 }
+
+@media (max-width: 768px) {
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+  }
+}

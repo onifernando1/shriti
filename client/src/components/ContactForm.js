@@ -66,6 +66,8 @@ export const ContactUs = () => {
 
   return (
     <div className="form-container">
+      <div>{process.env.REACT_APP}</div>
+
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input

@@ -13,7 +13,8 @@ function Seascape() {
     const filteredPaintings = allPaintingsList.filter(
       (painting) => painting.category === "seascape"
     );
-    setPaintings(filteredPaintings);
+    const sortedPaintings = filteredPaintings.sort((a, b) => a.order - b.order);
+    setPaintings(sortedPaintings);
   }, []);
 
   return (

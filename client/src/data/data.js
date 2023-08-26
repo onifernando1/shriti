@@ -35,6 +35,7 @@ export const allPaintingsList = [
     medium: "acrylic on canvas",
     size: "20x38cm",
     colour: "blue",
+    order: 4,
   },
   {
     _id: "64936c076975b11824efb2e0",
@@ -81,6 +82,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "80x80cm",
     colour: "green",
+    order: 3,
   },
   {
     _id: "64937e956975b11824efb2e5",
@@ -200,6 +202,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "100x150cm",
     colour: "pink",
+    order: 7,
   },
   {
     _id: "64938af26975b11824efb2f3",
@@ -273,6 +276,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "100x150cm",
     colour: "red",
+    order: 6,
   },
   {
     _id: "64938fb36975b11824efb2fb",
@@ -310,6 +314,7 @@ export const allPaintingsList = [
     category: "nudes",
     medium: "pencil on paper",
     size: "21x30cm",
+    order: 8,
   },
   {
     _id: "649c7ed1e4a36af598977488",
@@ -318,6 +323,7 @@ export const allPaintingsList = [
     category: "landscape",
     medium: "acrylic on canvas",
     size: "30x30cm",
+    order: 10,
   },
   {
     _id: "649c82d4e4a36af598977489",
@@ -326,14 +332,16 @@ export const allPaintingsList = [
     category: "landscape",
     medium: "acrylic on canvas",
     size: "30x30cm",
+    order: 11,
   },
   {
     _id: "649c85b8e4a36af59897748a",
     image: "ireland",
     title: "still lake (SOLD)",
-    category: "landscape",
+    category: "seascape",
     medium: "oil on canvas",
     size: "60x60cm",
+    order: 5.5,
   },
   {
     _id: "649c87dce4a36af59897748b",
@@ -342,6 +350,7 @@ export const allPaintingsList = [
     category: "landscape",
     medium: "oil on canvas",
     size: "76x51cm",
+    order: 2,
   },
   {
     _id: "649c8d53e4a36af59897748c",
@@ -418,6 +427,7 @@ export const allPaintingsList = [
     category: "landscape",
     medium: "acrylic on canvas",
     size: "30x55cm",
+    order: 5,
   },
   {
     _id: "649ca0b3e4a36af598977495",
@@ -448,7 +458,7 @@ export const allPaintingsList = [
     _id: "649ca273e4a36af598977498",
     image: "paddy",
     title: "paddy field",
-    category: "landscape",
+    category: "asian",
     medium: "oil on canvas",
     size: "150x125cm",
   },
@@ -459,6 +469,7 @@ export const allPaintingsList = [
     category: "nudes",
     medium: "charcoal and pastel on canvas",
     size: "40x40cm",
+    order: 5,
   },
   {
     _id: "649ca465e4a36af59897749a",
@@ -467,6 +478,7 @@ export const allPaintingsList = [
     category: "landscape",
     medium: "acrylic on canvas",
     size: "50x20cm",
+    order: 6,
   },
   {
     _id: "649ca4ece4a36af59897749b",
@@ -483,6 +495,7 @@ export const allPaintingsList = [
     category: "seascape",
     medium: "oil on canvas",
     size: "120x150cm",
+    order: 5,
   },
   {
     _id: "649ca6a1e4a36af59897749d",
@@ -500,6 +513,7 @@ export const allPaintingsList = [
     category: "landscape",
     medium: "oil on canvas",
     size: "100x160cm",
+    order: 9,
   },
   {
     _id: "649ca7dae4a36af59897749f",
@@ -525,6 +539,7 @@ export const allPaintingsList = [
     category: "landscape",
     medium: "mixed media",
     size: "50x50cm",
+    order: 7,
   },
   {
     _id: "649cc033e4a36af5989774a2",
@@ -533,6 +548,7 @@ export const allPaintingsList = [
     category: "seascape",
     medium: "oil on canvas",
     size: "41x101cm",
+    order: 7,
   },
   {
     _id: "649cc183e4a36af5989774a3",
@@ -550,6 +566,7 @@ export const allPaintingsList = [
     category: "seascape",
     medium: "oil on canvas",
     size: "41x101cm",
+    order: 6,
   },
   {
     _id: "649cc2d4e4a36af5989774a5",
@@ -558,6 +575,7 @@ export const allPaintingsList = [
     category: "seascape",
     medium: "oil on canvas",
     size: "51x76cm",
+    order: 1,
   },
   {
     _id: "649cc394e4a36af5989774a6",
@@ -584,6 +602,7 @@ export const allPaintingsList = [
     category: "seascape",
     medium: "oil on canvas",
     size: "100x140cm",
+    order: 2,
   },
   {
     _id: "649cc728e4a36af5989774a9",
@@ -601,6 +620,7 @@ export const allPaintingsList = [
     category: "nudes",
     medium: "charcoal on paper",
     size: "21x30cm",
+    order: 9,
   },
   {
     _id: "64ad7fdad247540a6a50c83a",
@@ -609,6 +629,7 @@ export const allPaintingsList = [
     category: "seascape",
     medium: "oil on canvas",
     size: "80x30cm",
+    order: 3,
   },
   {
     _id: "64ad8184d247540a6a50c83b",
@@ -617,6 +638,7 @@ export const allPaintingsList = [
     category: "seascape",
     medium: "oil on canvas",
     size: "120x150cm",
+    order: 4,
   },
   {
     _id: "64ad8391d247540a6a50c83c",
@@ -642,6 +664,7 @@ export const allPaintingsList = [
     category: "nudes",
     medium: "oil on canvas",
     size: "50x50cm",
+    order: 4,
   },
   {
     _id: "64ad8650d247540a6a50c83f",
@@ -658,6 +681,7 @@ export const allPaintingsList = [
     category: "nudes",
     medium: "oil on canvas",
     size: "102x128cm",
+    order: 1,
   },
   {
     _id: "64ad9f33d247540a6a50c841",
@@ -675,6 +699,7 @@ export const allPaintingsList = [
     category: "landscape",
     medium: "acrylic on canvas",
     size: "50cmx50cm",
+    order: 8,
   },
   {
     _id: "64ada086d247540a6a50c843",
@@ -683,6 +708,7 @@ export const allPaintingsList = [
     category: "nudes",
     medium: "acrylic on canvas",
     size: "60x90cm",
+    order: 3,
   },
   {
     _id: "64ada164d247540a6a50c844",
@@ -708,6 +734,7 @@ export const allPaintingsList = [
     medium: "acrylic on aluminum",
     size: "56x98cm",
     title: "over my shoulder",
+    order: 2,
   },
   {
     _id: "1",
@@ -716,6 +743,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "76x51cm",
     title: "pen ponds",
+    order: 1,
   },
   {
     _id: "2",

@@ -16,6 +16,7 @@ export const allPaintingsList = [
     medium: "acrylic on board",
     size: "30x42cm",
     colour: "pink",
+    order: 8,
   },
   {
     _id: "649364e06975b11824efb2dd",
@@ -70,6 +71,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "40x40cm",
     colour: "multicolour",
+    order: 13,
   },
   {
     _id: "64937d606975b11824efb2e4",
@@ -106,6 +108,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "40x50cm",
     colour: "cream",
+    order: 23,
   },
   {
     _id: "649381776975b11824efb2e8",
@@ -178,6 +181,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "50x50cm",
     colour: "multicolour",
+    order: 12,
   },
   {
     _id: "649389f56975b11824efb2f1",
@@ -249,7 +253,8 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "oil on canvas",
     size: "90x100cm",
-    "colour ": "red",
+    colour: "red",
+    order: 20,
   },
   {
     _id: "64938e486975b11824efb2f9",
@@ -277,6 +282,7 @@ export const allPaintingsList = [
     medium: "acrylic on canvas",
     size: "30x30cm",
     colour: "red",
+    order: 18,
   },
   {
     _id: "649390466975b11824efb2fc",
@@ -286,6 +292,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "100x160cm",
     colour: "multicolour",
+    order: 9,
   },
   { _id: "6499eb9770b66f241a250182" },
   {
@@ -343,6 +350,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "oil on canvas",
     size: "102x30cm",
+    order: 4,
   },
   {
     _id: "649c9438e4a36af59897748d",
@@ -351,6 +359,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "oil on canvas",
     size: "150x125cm",
+    order: 10,
   },
   {
     _id: "649c94d9e4a36af59897748e",
@@ -359,6 +368,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "oil on canvas",
     size: "122x152cm",
+    order: 19,
   },
   {
     _id: "649c963ae4a36af59897748f",
@@ -375,6 +385,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "oil on canvas",
     size: "53x91cm",
+    order: 11,
   },
   {
     _id: "649c9b1fe4a36af598977491",
@@ -423,6 +434,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "acrylic on canvas",
     size: "40x60cm",
+    order: 17,
   },
   {
     _id: "649ca202e4a36af598977497",
@@ -479,6 +491,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "oil on canvas",
     size: "30x80cm",
+    order: 2,
   },
   {
     _id: "649ca71ae4a36af59897749e",
@@ -495,6 +508,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "oil on canvas",
     size: "30x80cm",
+    order: 3,
   },
   {
     _id: "649cbecde4a36af5989774a0",
@@ -527,6 +541,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "oil on canvas",
     size: "50x20cm",
+    order: 5,
   },
   {
     _id: "649cc229e4a36af5989774a4",
@@ -540,7 +555,7 @@ export const allPaintingsList = [
     _id: "649cc2d4e4a36af5989774a5",
     image: "sandip1",
     title: "i'm here (SOLD)",
-    category: "abstract",
+    category: "seascape",
     medium: "oil on canvas",
     size: "51x76cm",
   },
@@ -551,6 +566,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "oil on canvas",
     size: "100x100cm",
+    order: 1,
   },
   {
     _id: "649cc587e4a36af5989774a7",
@@ -559,6 +575,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "oil on canvas",
     size: "70x50cm",
+    order: 22,
   },
   {
     _id: "649cc62ae4a36af5989774a8",
@@ -575,6 +592,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "acrylic on board",
     size: "30x42cm",
+    order: 7,
   },
   {
     _id: "64ad7c81d247540a6a50c838",
@@ -607,6 +625,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "oil on canvas",
     size: "150x125cm",
+    order: 15,
   },
   {
     _id: "64ad84b7d247540a6a50c83d",
@@ -647,6 +666,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "acrylic on board",
     size: "30x42cm",
+    order: 6,
   },
   {
     _id: "64ad9ff3d247540a6a50c842",
@@ -671,6 +691,7 @@ export const allPaintingsList = [
     category: "abstract",
     medium: "oil on canvas",
     size: "55x100cm",
+    order: 21,
   },
   {
     _id: "64ada736d247540a6a50c845",
@@ -693,7 +714,7 @@ export const allPaintingsList = [
     image: "penponds",
     category: "landscape",
     medium: "oil on canvas",
-    size: "",
+    size: "76x51cm",
     title: "pen ponds",
   },
   {
@@ -701,7 +722,7 @@ export const allPaintingsList = [
     image: "fishermen",
     category: "littlepeople",
     medium: "oil on canvas",
-    size: "30x30ck",
-    title: "sri lankan fishermen",
+    size: "30x30cm",
+    title: "sri lankan fishermen (SOLD)",
   },
 ];

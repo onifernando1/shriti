@@ -458,7 +458,7 @@ export const allPaintingsList = [
   },
   {
     _id: "649ca4ece4a36af59897749b",
-    "image ": "pj",
+    image: "pj",
     title: "pj and flossy (SOLD)",
     category: "animals",
     medium: "pen/ink/watercolour",

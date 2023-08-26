@@ -28,7 +28,7 @@ function About() {
             In 2008 I, sadly lost my husband unexpectedly. I was left with 3
             young children. It was this life-changing event that confirmed for
             me that life is too short not to follow your heart and ever since I
-            have committed to pursue my art as a career.
+            have committed to pursuing my art as a career.
           </p>{" "}
           <p>
             {" "}
@@ -46,7 +46,7 @@ function About() {
             My style varies too, depending on my mood. I love working in oils
             with knives applied thickly creating texture and form using vibrant
             rich colours but also love the delicate impressionistic washes of
-            pen and ink and watercolor in monochrome.{" "}
+            pen, ink and watercolor.{" "}
           </p>{" "}
           <p>
             I love a commission, as I recognise that each one that I have had

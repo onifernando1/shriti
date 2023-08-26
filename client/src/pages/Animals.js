@@ -13,7 +13,8 @@ function Animals() {
     const filteredPaintings = allPaintingsList.filter(
       (painting) => painting.category === "animals"
     );
-    setPaintings(filteredPaintings);
+    const sortedPaintings = filteredPaintings.sort((a, b) => a.order - b.order);
+    setPaintings(sortedPaintings);
   }, []);
 
   return (

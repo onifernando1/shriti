@@ -16,7 +16,7 @@
 
 @media (max-width: 768px) {
   .contact-title {
-    margin-top: 5.5rem;
+    margin-top: 4rem;
   }
 }
 
@@ -30,14 +30,14 @@
   font-size: 1.3rem;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .contact-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 95vh;
   }
-}
+} */
 
 a,
 a:visited {

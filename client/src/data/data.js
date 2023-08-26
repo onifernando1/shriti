@@ -7,6 +7,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "40x100cm",
     colour: "green",
+    order: 4,
   },
   {
     _id: "649363726975b11824efb2dc",
@@ -26,6 +27,7 @@ export const allPaintingsList = [
     medium: "pencil on paper",
     size: "21x30cm",
     colour: "black and white",
+    order: 1,
   },
   {
     _id: "64936a876975b11824efb2df",
@@ -45,6 +47,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "122x122cm",
     colour: "blue",
+    order: 1,
   },
   {
     _id: "64936d476975b11824efb2e1",
@@ -54,6 +57,7 @@ export const allPaintingsList = [
     medium: "mixed media on canvas ",
     size: "30x30cm",
     colour: "multicolour",
+    order: 4,
   },
   {
     _id: "64936e486975b11824efb2e2",
@@ -63,6 +67,7 @@ export const allPaintingsList = [
     medium: "mixed media on canvas",
     size: "40x40cm",
     colour: "bronze",
+    order: 1,
   },
   {
     _id: "64936f516975b11824efb2e3",
@@ -101,6 +106,7 @@ export const allPaintingsList = [
     medium: "pencil on paper",
     size: "40x50cm",
     colour: "black and white",
+    order: 3,
   },
   {
     _id: "6493809c6975b11824efb2e7",
@@ -120,6 +126,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "50x80cm",
     colour: "green",
+    order: 1,
   },
   {
     _id: "649383ab6975b11824efb2e9",
@@ -129,6 +136,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "40x50cm",
     colour: "multicolour",
+    order: 2,
   },
   {
     _id: "649385176975b11824efb2ea",
@@ -138,6 +146,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "50x80cm",
     colour: "blue",
+    order: 4,
   },
   {
     _id: "649385d06975b11824efb2eb",
@@ -147,6 +156,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "50x80cm",
     colour: "yellow",
+    order: 3,
   },
   {
     _id: "649386716975b11824efb2ec",
@@ -156,6 +166,7 @@ export const allPaintingsList = [
     medium: "pen/ink/watercolour on paper",
     size: "21x21cm",
     colour: "black and white",
+    order: 5,
   },
   {
     _id: "649387406975b11824efb2ed",
@@ -165,6 +176,7 @@ export const allPaintingsList = [
     medium: "mixed media on paper",
     size: "21x30cm",
     colour: "grey",
+    order: 1,
   },
   {
     _id: "649388616975b11824efb2ee",
@@ -174,6 +186,7 @@ export const allPaintingsList = [
     medium: "pen/ink/watercolour on paper",
     size: "21x30cm",
     colour: "sepia",
+    order: 2,
   },
   {
     _id: "649388f06975b11824efb2ef",
@@ -193,6 +206,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "40x40cm",
     colour: "orange",
+    order: 7,
   },
   {
     _id: "64938a6f6975b11824efb2f2",
@@ -212,6 +226,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "100x100cm",
     colour: "grey",
+    order: 1,
   },
   {
     _id: "64938b6a6975b11824efb2f4",
@@ -221,6 +236,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "100x100cm",
     colour: "grey",
+    order: 2,
   },
   {
     _id: "64938be16975b11824efb2f5",
@@ -230,6 +246,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "50x100cm",
     colour: "red",
+    order: 4,
   },
   {
     _id: "64938c606975b11824efb2f6",
@@ -239,6 +256,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "40x40cm",
     colour: "red",
+    order: 5,
   },
   {
     _id: "64938cdb6975b11824efb2f7",
@@ -248,6 +266,7 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "50x70cm",
     colour: "red",
+    order: 6,
   },
   {
     _id: "64938d586975b11824efb2f8",
@@ -267,6 +286,7 @@ export const allPaintingsList = [
     medium: "pastel on paper",
     size: "21x30cm",
     colour: "pink",
+    order: 6,
   },
   {
     _id: "64938f1d6975b11824efb2fa",
@@ -306,6 +326,7 @@ export const allPaintingsList = [
     category: "animals",
     medium: "pen/ink/watercolour",
     size: "21x30cm",
+    order: 7,
   },
   {
     _id: "6499ee3c70b66f241a250184",
@@ -386,6 +407,7 @@ export const allPaintingsList = [
     category: "littlepeople",
     medium: "acrylic on canvas (SOLD)",
     size: "30x50cm",
+    order: 3,
   },
   {
     _id: "649c97bbe4a36af598977490",
@@ -411,6 +433,7 @@ export const allPaintingsList = [
     category: "asian",
     medium: "pastel on paper",
     size: "21x30cm",
+    order: 4,
   },
   {
     _id: "649c9e2ce4a36af598977493",
@@ -419,6 +442,7 @@ export const allPaintingsList = [
     category: "animals",
     medium: "pen/ink/watercolour on paper",
     size: "21x30cm",
+    order: 3,
   },
   {
     _id: "649c9ffbe4a36af598977494",
@@ -436,6 +460,7 @@ export const allPaintingsList = [
     category: "asian",
     medium: "mixed media on canvas",
     size: "20x45cm",
+    order: 2,
   },
   {
     _id: "649ca15de4a36af598977496",
@@ -449,10 +474,11 @@ export const allPaintingsList = [
   {
     _id: "649ca202e4a36af598977497",
     image: "oscar",
-    "title ": "oscar (SOLD)",
+    title: "oscar (SOLD)",
     category: "animals",
     medium: "oil on canvas",
     size: "30x30cm",
+    order: 6,
   },
   {
     _id: "649ca273e4a36af598977498",
@@ -461,6 +487,7 @@ export const allPaintingsList = [
     category: "asian",
     medium: "oil on canvas",
     size: "150x125cm",
+    order: 3,
   },
   {
     _id: "649ca33fe4a36af598977499",
@@ -487,6 +514,7 @@ export const allPaintingsList = [
     category: "animals",
     medium: "pen/ink/watercolour",
     size: "21x30cm",
+    order: 4,
   },
   {
     _id: "649ca5f1e4a36af59897749c",
@@ -531,6 +559,7 @@ export const allPaintingsList = [
     category: "portrait",
     medium: "pencil on paper",
     size: "21x30cm",
+    order: 2,
   },
   {
     _id: "649cbf75e4a36af5989774a1",
@@ -656,6 +685,7 @@ export const allPaintingsList = [
     category: "portrait",
     medium: "pencil on paper",
     size: "21x30cm",
+    order: 3,
   },
   {
     _id: "64ad859fd247540a6a50c83e",
@@ -673,6 +703,7 @@ export const allPaintingsList = [
     category: "asian",
     medium: "acrylic on canvas",
     size: "30x30cm",
+    order: 5,
   },
   {
     _id: "64ad8796d247540a6a50c840",
@@ -726,6 +757,7 @@ export const allPaintingsList = [
     category: "animals",
     medium: "pen/ink/watercolour",
     size: "21x30cm",
+    order: 5,
   },
   {
     _id: "64b01a9516bbd9dfe24b4a20",
@@ -752,5 +784,6 @@ export const allPaintingsList = [
     medium: "oil on canvas",
     size: "30x30cm",
     title: "sri lankan fishermen (SOLD)",
+    order: 2,
   },
 ];

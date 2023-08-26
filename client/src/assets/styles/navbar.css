@@ -44,8 +44,8 @@
   /* right: 8%; */
   /* top: 30px;
   right: 30px; */
-  top: 1rem;
-  right: 3rem;
+  top: 1.2rem;
+  right: 1.5rem;
 }
 
 /* @media (max-width: 768px) {
@@ -175,7 +175,7 @@
   /* top: -15px;
   right: 95px; */
   top: -2rem;
-  right: 6rem;
+  right: 5rem;
   /* margin-top: 210px; */
   /* margin-left: 250px; */
 }

@@ -13,7 +13,8 @@ function Littlepeople() {
     const filteredPaintings = allPaintingsList.filter(
       (painting) => painting.category === "littlepeople"
     );
-    setPaintings(filteredPaintings);
+    const sortedPaintings = filteredPaintings.sort((a, b) => a.order - b.order);
+    setPaintings(sortedPaintings);
   }, []);
 
   return (

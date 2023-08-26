@@ -13,7 +13,8 @@ function Portrait() {
     const filteredPaintings = allPaintingsList.filter(
       (painting) => painting.category === "portrait"
     );
-    setPaintings(filteredPaintings);
+    const sortedPaintings = filteredPaintings.sort((a, b) => a.order - b.order);
+    setPaintings(sortedPaintings);
   }, []);
 
   return (

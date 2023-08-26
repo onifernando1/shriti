@@ -10,8 +10,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  margin-top: 2rem;
+  /* padding: 20px; */
+  margin-top: 1.6rem;
 }
 
 .about-text {
@@ -36,4 +36,9 @@
   .shriti-portrait {
     margin-bottom: 0;
   }
+}
+
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }

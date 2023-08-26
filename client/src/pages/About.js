@@ -3,6 +3,7 @@ require("../assets/styles/about.css");
 function About() {
   return (
     <div className="about-container">
+      <div className="about-title">my story</div>
       <img
         className="shriti-portrait"
         src={require("../assets/images/shritiportrait.jpg")}

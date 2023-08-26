@@ -4,8 +4,8 @@ function News() {
     <div className="news-container">
       <div className="upcoming-news">upcoming events</div>
       <div className="written-news">
-        <div>KAOS @ Rose Theatre</div>
-        <div>4th October - 4th November</div>
+        <div>KAOS @ rose theatre</div>
+        <div>4th october - 4th november</div>
       </div>
       <img className="news" src={require("../assets/images/kaos.jpg")}></img>
     </div>

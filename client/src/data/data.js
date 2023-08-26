@@ -688,4 +688,20 @@ export const allPaintingsList = [
     size: "56x98cm",
     title: "over my shoulder",
   },
+  {
+    _id: "1",
+    image: "penponds",
+    category: "landscape",
+    medium: "oil on canvas",
+    size: "",
+    title: "pen ponds",
+  },
+  {
+    _id: "2",
+    image: "fishermen",
+    category: "littlepeople",
+    medium: "oil on canvas",
+    size: "30x30ck",
+    title: "sri lankan fishermen",
+  },
 ];
